@@ -1,0 +1,90 @@
+format = """
+  $os\
+  $username\
+  $hostname\
+  $directory\
+  $git_branch\
+  $git_status\
+  $git_metrics\
+  $fill\
+  $python\
+  $lua\
+  $rlang\
+  $cmd_duration\
+  $jobs\
+  $line_break\
+  $character
+"""
+[os]
+  style = 'bold #ffffff'
+  disabled = false
+  format = '[$symbol ]($style)'
+
+[os.symbols]
+  Arch = ''
+
+[username]
+  show_always = true
+  # style_user = "bold #e6a176"
+  style_user = 'bold #FF8200'
+  format = '[$user]($style)'
+
+[hostname]
+  ssh_only = false
+  format = '[\[@$hostname\]]($style) at '
+  # style = 'bold #FF8200'
+  style = 'bold #008EDF'
+
+[directory]
+  truncation_length = 3
+  style = 'bold #00e3ff'
+  format = '[$path]($style)[$read_only]($read_only_style) '
+
+
+[python]
+  format = ' [${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+  symbol = ' '
+  detect_extensions = ['py', 'ipynb']
+
+[git_branch]
+  style = 'bold #e1562c'
+  format = 'on [$symbol$branch(:$remote_branch)]($style)'
+  symbol = ' '
+
+[git_status]
+  staged = '[++${count} ](bold #CD00DB)'
+  ahead = '[${count} ](bold #B7DF00)'
+  diverged = '⇕ [${ahead_count}](bold #7F00DF) : [${behind_count}](bold #7F00DF)'
+  behind = '[${count} ](bold #F39C12)'
+  up_to_date = '[](bold #58D68D)'
+  untracked = '[?${count} ](bold #EC7063)'
+  modified = '[!${count} ](bold #05C2EB)'
+  deleted = '[✘ ${count} ](bold #A80047)'
+  renamed = '[󱞪${count} ](bold #04C88B)'
+  format = ' [$all_status$ahead_behind]($style)'
+  style = 'bold #e1562c'
+
+
+[lua]
+  format = ' [$symbol($version )]($style)'
+  symbol = '󰢱 '
+
+[rlang]
+  format = ' [$symbol($version )]($style)'
+  style = 'bold #05C2EB'
+  symbol = 'ﳒ '  
+
+[jobs]
+  symbol = '󱥸 '
+
+[fill]
+  symbol = ' '
+
+[character]
+  # success_symbol = '[❯](bold green) '
+  success_symbol = '[󰁕](bold #00EA00)'
+  error_symbol = '[✗](bold #EA0000) '
+
+[git_metrics]
+  added_style = 'bold #8900DF'
+  format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
