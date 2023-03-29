@@ -1,16 +1,25 @@
 set selection-clipboard clipboard
 set window-title-basename true
 
+map [normal] t goto
+map [fullscreen] t goto
+map [presentation] t goto
+
 set sandbox none
 
 set window-height 1080
 set window-width 1920
 
-map b toggle_statusbar
-map [normal]        g toggle_fullscreen
-map [fullscreen]    g toggle_fullscreen
-map [normal]        G toggle_presentation
-map [presentation]  G toggle_presentation
+set first-page-column 1:1
+
+map [normal] b toggle_statusbar
+map [fullscreen] b toggle_statusbar
+map [presentation] b toggle_statusbar
+
+map [normal]        e toggle_fullscreen
+map [fullscreen]    e toggle_fullscreen
+map [normal]        E toggle_presentation
+map [presentation]  E toggle_presentation
 
 set adjust-open best-fit
 set guioptions none

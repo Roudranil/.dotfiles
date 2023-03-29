@@ -30,6 +30,10 @@ alias rc='nvim ~/.zshrc'
 alias data='cd /data/'
 alias ds='vrun ~/ds'
 
+function vid() {
+    mpv "$@" &
+}
+
 function pdf() {
   zathura "$@" &
 }
