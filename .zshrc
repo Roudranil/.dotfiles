@@ -18,17 +18,19 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
+eval "$(feh --bg-scale ~/.dotfiles/wallpapers/futuristic-city-2.jpg)"
 
 alias hx='helix'
 alias ls='exa --icons'
-alias cmi='cd /data/cmi/notes/'
 alias cmi-code='code /data/cmi/notes/'
 eval "$(zoxide init zsh)"
 alias cd='z'
 alias cdi='zi'
 alias rc='nvim ~/.zshrc'
 alias data='cd /data/'
+alias nemo='nemo .'
 alias ds='vrun ~/ds'
+alias code='code .'
 
 function vid() {
     mpv "$@" &
@@ -38,8 +40,14 @@ function pdf() {
   zathura "$@" &
 }
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+function writer() {
+    lowriter "$@" &
+}
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+function impress() {
+    loimpress "$@" &
+}
+
+function pen() {
+  xournalpp "$@" &
+}

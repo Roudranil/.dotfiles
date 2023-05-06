@@ -36,7 +36,7 @@ format = """
   style = 'bold #008EDF'
 
 [directory]
-  truncation_length = 3
+  truncation_length = 4
   style = 'bold #00e3ff'
   format = '[$path]($style)[$read_only]($read_only_style) '
 
