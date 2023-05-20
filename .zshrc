@@ -1,6 +1,8 @@
 export ZSH="/home/rudy/.oh-my-zsh"
 export SPACESHIP_CONFIG="/home/rudy/.config/spaceship/spaceshiprc.zsh"
 
+export PATH=$PATH:"/home/rudy/.local/bin"
+
 #ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME = ""
 # ZSH_THEME="spaceship-prompt/spaceship"
@@ -30,7 +32,6 @@ alias rc='nvim ~/.zshrc'
 alias data='cd /data/'
 alias nemo='nemo .'
 alias ds='vrun ~/ds'
-alias code='code .'
 
 function vid() {
     mpv "$@" &
