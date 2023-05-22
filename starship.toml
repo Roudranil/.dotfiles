@@ -6,10 +6,10 @@ format = """
   $git_branch\
   $git_status\
   $git_metrics\
-  $fill\
   $python\
   $lua\
   $rlang\
+  $fill\
   $cmd_duration\
   $jobs\
   $line_break\
@@ -45,7 +45,7 @@ palette = 'catppuccin_mocha'
 
 
 [python]
-  format = ' [${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+  format = 'via [${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
   symbol = ' '
   detect_extensions = ['py', 'ipynb']
 
@@ -69,11 +69,11 @@ palette = 'catppuccin_mocha'
 
 
 [lua]
-  format = ' [$symbol($version )]($style)'
+  format = 'via [$symbol($version )]($style)'
   symbol = '󰢱 '
 
 [rlang]
-  format = ' [$symbol($version )]($style)'
+  format = 'via [$symbol($version )]($style)'
   style = 'bold teal'
   symbol = 'ﳒ '  
 

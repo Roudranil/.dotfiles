@@ -21,6 +21,8 @@ map [fullscreen]    e toggle_fullscreen
 map [normal]        E toggle_presentation
 map [presentation]  E toggle_presentation
 
+map <C-i> recolor
+
 set adjust-open best-fit
 set guioptions none
 
@@ -60,3 +62,8 @@ set render-loading-bg "#f8f8f2" # Foreground
 
 set recolor-lightcolor "#282a36" # Background
 set recolor-darkcolor "#f8f8f2"  # Foreground
+
+set recolor-keephue true
+set recolor true
+
+include catppuccin-mocha

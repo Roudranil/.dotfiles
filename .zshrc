@@ -20,7 +20,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
-eval "$(feh --bg-scale ~/.dotfiles/wallpapers/futuristic-city-2.jpg)"
+eval "$(feh --bg-scale ~/.dotfiles/wallpapers/night-city.png)"
 
 alias hx='helix'
 alias ls='exa --icons'
@@ -32,6 +32,7 @@ alias rc='nvim ~/.zshrc'
 alias data='cd /data/'
 alias nemo='nemo .'
 alias ds='vrun ~/ds'
+alias dots='cd ~/.dotfiles'
 
 function vid() {
     mpv "$@" &
