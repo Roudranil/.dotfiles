@@ -1,0 +1,40 @@
+#!/bin/zsh
+
+show_help() {
+    echo "Usage: $0 [OPTIONS] <folder_name>"
+    echo "Move a folder from ~/.config to ~/.dotfiles and create a symbolic link."
+    echo ""
+    echo "Options:"
+    echo "  -h, --help    Show this help message and exit"
+    echo ""
+    echo "Arguments:"
+    echo "  folder_name   Name of the folder to move"
+    echo ""
+}
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    show_help
+    exit 0
+fi
+
+if [ $# -ne 1 ]; then
+    echo "Invalid usage. Use '$0 --help' to see the available options."
+    exit 1
+fi
+
+x="$1"
+source_path="$HOME/.config/$x"
+destination_path="$HOME/.dotfiles/$x"
+
+if [ ! -d "$source_path" ]; then
+    echo "The folder $x does not exist in ~/.config."
+    exit 1
+fi
+
+if [ -e "$destination_path" ]; then
+    echo "The folder $x already exists in ~/.dotfiles."
+    exit 1
+fi
+
+mv "$source_path" "$destination_path"
+ln -s "$destination_path" "$source_path"

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+if [ "$1" == "--help" ]; then
+    echo "ripsearch - Fast search using find command"
+    echo "Usage:"
+    echo "  ripsearch <folder> <pattern>        Search for all locations of file or folder with names matching the pattern inside the folder recursively"
+    echo "  ripsearch <folder> -ext <extension> Search for all locations of files with the given extension inside the folder recursively"
+    exit 0
+fi
+
+if [ $# -lt 2 ]; then
+    echo "Error: Insufficient arguments"
+    echo "Usage: ripsearch <folder> <pattern>"
+    exit 1
+fi
+
+folder=$1
+pattern=$2
+extension=""
+
+if [ "$3" == "-ext" ]; then
+    if [ $# -lt 4 ]; then
+        echo "Error: Insufficient arguments"
+        echo "Usage: ripsearch <folder> -ext <extension>"
+        exit 1
+    fi
+
+    extension=$4
+fi
+
+if [ "$folder" == "\\" ]; then
+    folder="/"
+fi
+
+if [ -n "$extension" ]; then
+    find "$folder" -type f -name "*.$extension"
+else
+    find "$folder" -name "*$pattern*"
+fi
