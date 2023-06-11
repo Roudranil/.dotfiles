@@ -15,7 +15,7 @@ window:
     columns: 100
     lines: 25
 
-  title: "rudy's pc"
+  title: "  yee haaww"
   dynamic_title: false
 
 font:
@@ -29,10 +29,10 @@ font:
     family: CodeNewRoman Nerd Font
     style: Italic
 
-  size: 12.0
+  size: 12.5
 
   offset:
-    y: 1
+    y: 0
 
 draw_bold_text_with_bright_colors: true
 
@@ -89,3 +89,6 @@ cursor:
   style:
     shape: Beam
     blinking: On
+
+shell:
+  program: /bin/zellij

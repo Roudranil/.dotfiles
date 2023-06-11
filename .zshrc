@@ -1,11 +1,20 @@
 export ZSH="/home/rudy/.oh-my-zsh"
 export SPACESHIP_CONFIG="/home/rudy/.config/spaceship/spaceshiprc.zsh"
 
-export PATH=$PATH:"/home/rudy/.local/bin"
+
+# Define a variable to hold additional paths
+CUSTOM_PATH="/home/rudy/.dotfiles/scripts:\
+/home/rudy/.local/bin:\
+/home/rudy/.local/share/nvim/mason/bin"
+
+# Append the additional paths to the existing $PATH
+export PATH="$PATH:$CUSTOM_PATH"
 
 #ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME = ""
 # ZSH_THEME="spaceship-prompt/spaceship"
+
+setopt globdots
 
 source ~/zsh-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 plugins=(
@@ -33,6 +42,7 @@ alias data='cd /data/'
 alias nemo='nemo .'
 alias ds='vrun ~/ds'
 alias dots='cd ~/.dotfiles'
+alias pswd='cat ~/lti-pswd.txt | xclip -selection clipboard'
 
 function vid() {
     mpv "$@" &
@@ -53,3 +63,5 @@ function impress() {
 function pen() {
   xournalpp "$@" &
 }
+
+

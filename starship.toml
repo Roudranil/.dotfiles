@@ -1,7 +1,5 @@
 format = """
   $os\
-  $username\
-  $hostname\
   $directory\
   $git_branch\
   $git_status\
@@ -41,7 +39,7 @@ palette = 'catppuccin_mocha'
 [directory]
   truncation_length = 4
   style = 'bold sapphire'
-  format = '[$path]($style)[$read_only]($read_only_style) '
+  format = ' at [$path]($style)[$read_only]($read_only_style) '
 
 
 [python]
@@ -64,7 +62,7 @@ palette = 'catppuccin_mocha'
   modified = '[!${count} ](bold #05C2EB)'
   deleted = '[✘ ${count} ](bold #A80047)'
   renamed = '[󱞪${count} ](bold #04C88B)'
-  format = ' [$all_status$ahead_behind]($style)'
+  format = ' [$all_status$ahead_behind]($style) '
   style = 'bold #e1562c'
 
 
