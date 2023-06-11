@@ -1,6 +1,21 @@
-require "rudy.options"
-require "rudy.keymaps"
-require "rudy.plugins"
-require "rudy.colorschemes"
-require "rudy._cmp"
-require "rudy.lsp"
+require "custom.options"
+require "custom.autocommands"
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- plugins
+require "plugins"
+
+-- colourschemes
+vim.cmd.colorscheme "catppuccin"
