@@ -1,3 +1,4 @@
 **/*.bak
 .vscode/
 tmux/
+.mypy_cache/
