@@ -13,6 +13,7 @@ local plugins = {
         branch = "v2.0",
         build = function()
             require("base46").load_all_highlights()
+            _ = require("base46.integrations.defaults")
         end,
     },
     {
@@ -41,13 +42,6 @@ local plugins = {
         config = function(_, opts)
             require("catppuccin").setup(opts)
         end,
-        custom_highlights = function(colors)
-            return {
-                VertSplit = function()
-                    return { fg = "#f2cdcd" }
-                end
-            }
-        end
     },
 
     -- nvim tree
@@ -77,6 +71,20 @@ local plugins = {
     },
 
     -- indent lines
+    -- {
+    --     "lukas-reineke/indent-blankline.nvim",
+    --     init = function()
+    --         require("core.utils").lazy_load "indent-blankline.nvim"
+    --     end,
+    --     config = function()
+    --         require("base46.integrations.blankline")
+    --         require("indent_blankline").setup({
+    --             space_char_blankline = " ",
+    --             show_current_context = true,
+    --             show_current_context_start = true,
+    --         })
+    --     end
+    -- },
     {
         "lukas-reineke/indent-blankline.nvim",
         init = function()
@@ -87,7 +95,7 @@ local plugins = {
         end,
         config = function(_, opts)
             require("core.utils").load_mappings "blankline"
-            dofile(vim.g.base46_cache .. "blankline")
+            require("base46.integrations.blankline")
             require("indent_blankline").setup(opts)
         end,
     },
@@ -239,18 +247,40 @@ local plugins = {
     },
 
     {
-        'akinsho/bufferline.nvim', 
-        version = "*", 
+        'akinsho/bufferline.nvim',
+        version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons',
-        opts = function ()
+        opts = function()
             return require("plugins.configs.bufferline")
         end,
-        config = function (_, opts)
+        config = function(_, opts)
             require("bufferline").setup(opts)
         end,
         lazy = false,
-    }
+    },
 
+    -- utilities
+    {
+        "nvim-telescope/telescope.nvim",
+        dependencies = "nvim-treesitter/nvim-treesitter",
+        cmd = "Telescope",
+        init = function()
+            require("core.utils").load_mappings "telescope"
+        end,
+        opts = function()
+            return require "plugins.configs.telescope"
+        end,
+        config = function(_, opts)
+            local hlgroups = require("base46.integrations.telescope")
+            local telescope = require "telescope"
+            telescope.setup(opts)
+
+            -- load extensions
+            for _, ext in ipairs(opts.extensions_list) do
+                telescope.load_extension(ext)
+            end
+        end,
+    },
 }
 
 local config = require("core.utils").load_config()

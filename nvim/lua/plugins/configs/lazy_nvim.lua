@@ -1,6 +1,6 @@
 return {
     defaults = { lazy = true },
-    install = { colorscheme = { "nvchad" } },
+    install = { colorscheme = { "catppuccin" } },
   
     ui = {
         icons = {
@@ -9,6 +9,8 @@ return {
             loaded = "",
             not_loaded = "",
         },
+        title = "lazy.nvim",
+        border = "rounded"
     },
   
     performance = {
@@ -46,4 +48,3 @@ return {
         },
     },
 }
-  

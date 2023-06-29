@@ -15,7 +15,8 @@ M.base_30 = {
     red = "#F38BA8",
     baby_pink = "#ffa5c3",
     pink = "#F5C2E7",
-    line = "#383747", -- for lines like vertsplit
+    -- line = "#383747", -- for lines like vertsplit
+    line = "#ffe9b6",
     green = "#ABE9B3",
     dirty_green = "#9FDB00",
     vibrant_green = "#b6f4be",
@@ -28,7 +29,7 @@ M.base_30 = {
     teal = "#B5E8E0",
     orange = "#F8BD96",
     cyan = "#89DCEB",
-    statusline_bg = "#232232",
+    statusline_bg = "#3e3d4d",
     lightbg = "#2f2e3e",
     pmenu_bg = "#ABE9B3",
     folder_bg = "#89B4FA",
@@ -36,7 +37,10 @@ M.base_30 = {
     custom_blue_grey = "#426C87",
     custom_bright_red = "#EE4B2B",
     custom_bright_green = "#AAFF00",
-    custom_bright_orange = "#FFAC1C"
+    custom_bright_orange = "#FFAC1C",
+    space = "#45475A",
+    surface = "#313244"
+
 }
 
 M.base_16 = {

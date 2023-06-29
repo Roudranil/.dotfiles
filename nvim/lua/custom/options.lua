@@ -4,9 +4,11 @@ local g = vim.g
 -------------------------------------- options ------------------------------------------
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
-
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
+opt.list = true
+opt.listchars:append "space:⋅"
+opt.listchars:append "eol:↴"
 
 -- Indenting
 opt.expandtab = true

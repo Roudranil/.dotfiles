@@ -41,6 +41,8 @@ local options = {
             uninstall_server = "X",
             cancel_installation = "<C-c>",
         },
+
+        border = 'rounded'
     },
 
     max_concurrent_installers = 10,

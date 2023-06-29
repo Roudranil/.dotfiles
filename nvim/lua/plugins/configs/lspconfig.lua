@@ -68,6 +68,7 @@ lspconfig.lua_ls.setup {
     },
 }
 
+require('lspconfig.ui.windows').default_options.border = 'rounded'
 -- pyright
 lspconfig.pyright.setup({
     on_attach = M.on_attach,

@@ -4,27 +4,33 @@ local telescope_style = require("core.utils").load_config().ui.telescope.style
 
 local hlgroups = {
 
-  TelescopePromptPrefix = {
-    fg = colors.red,
-    bg = colors.black2,
-  },
+    TelescopePromptPrefix = {
+        fg = colors.red,
+        bg = colors.black2,
+    },
 
-  TelescopeNormal = { bg = colors.darker_black },
+    TelescopeNormal = { bg = colors.darker_black },
 
-  TelescopePreviewTitle = {
-    fg = colors.black,
-    bg = colors.green,
-  },
+    TelescopePreviewTitle = {
+        fg = colors.black,
+        bg = colors.green,
+    },
 
-  TelescopePromptTitle = {
-    fg = colors.black,
-    bg = colors.red,
-  },
+    TelescopePromptTitle = {
+        fg = colors.black,
+        bg = colors.red,
+    },
 
-  TelescopeSelection = { bg = colors.black2, fg = colors.white },
-  TelescopeResultsDiffAdd = { fg = colors.green },
-  TelescopeResultsDiffChange = { fg = colors.yellow },
-  TelescopeResultsDiffDelete = { fg = colors.red },
+    TelescopeSelection = { bg = colors.black2, fg = colors.white },
+    TelescopeResultsDiffAdd = { fg = colors.green },
+    TelescopeResultsDiffChange = { fg = colors.yellow },
+    TelescopeResultsDiffDelete = { fg = colors.red },
+
+    TelescopeBorder = { fg = colors.blue },
+    TelescopePromptBorder = { fg = colors.blue },
+    TelescopeResultsTitle = { fg = colors.black, bg = colors.green },
+    TelescopePromptNormal = { bg = colors.black },
+
 }
 
 local styles = {
@@ -48,5 +54,11 @@ local styles = {
 }
 
 local result = vim.tbl_deep_extend("force", hlgroups, styles[telescope_style])
+
+for hl, col in pairs(hlgroups) do
+    vim.api.nvim_set_hl(0, hl, col)
+end
+
+vim.api.nvim_command("redraw")
 
 return result

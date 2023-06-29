@@ -53,7 +53,7 @@ config = {
     tabline = {},
     winbar = {},
     inactive_winbar = {},
-    extensions = {}
+    extensions = { "nvim-tree" }
 }
 
 local conditions = {
@@ -168,7 +168,7 @@ ins_left {
             return { fg = colors.white, gui = 'bold' }
         end
     end,
-    path = 4,
+    path = 0,
     symbols = {
         modified = '[+]',      -- Text to show when the file is modified.
         readonly = '[]',    -- Text to show when the file is non-modifiable or readonly.
@@ -177,7 +177,7 @@ ins_left {
     }
 }
 
-ins_left { 'location' }
+-- ins_left { 'location' }
 
 ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
 
@@ -217,7 +217,7 @@ ins_left {
         end
         return msg
     end,
-    icon = ' LSP:',
+    icon = ' :',
     color = function()
         return { fg = colors.grey_fg2, gui = 'bold' }
     end,
