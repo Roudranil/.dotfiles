@@ -1,46 +1,30 @@
-local colors = require("base46").get_theme_tb "base_30"
+local colors = require("base46.themes.catppuccin").base_30
+local mocha = require("base46.themes.catppuccin").mocha
 
-return {
-  NvimTreeEmptyFolderName = { fg = colors.folder_bg },
-  NvimTreeEndOfBuffer = { fg = colors.darker_black },
-  NvimTreeFolderIcon = { fg = colors.folder_bg },
-  NvimTreeFolderName = { fg = colors.folder_bg },
-  NvimTreeGitDirty = { fg = colors.red },
-  NvimTreeIndentMarker = { fg = colors.grey_fg },
-  NvimTreeNormal = { bg = colors.darker_black },
-  NvimTreeNormalNC = { bg = colors.darker_black },
-  NvimTreeOpenedFolderName = { fg = colors.folder_bg },
-  NvimTreeGitIgnored = { fg = colors.light_grey },
-
-  NvimTreeWinSeparator = {
-    fg = colors.darker_black,
-    bg = colors.darker_black,
-  },
-
-  NvimTreeWindowPicker = {
-    fg = colors.red,
-    bg = colors.black2,
-  },
-
-  NvimTreeCursorLine = {
-    bg = colors.black2,
-  },
-
-  NvimTreeGitNew = {
-    fg = colors.yellow,
-  },
-
-  NvimTreeGitDeleted = {
-    fg = colors.red,
-  },
-
-  NvimTreeSpecialFile = {
-    fg = colors.yellow,
-    bold = true,
-  },
-
-  NvimTreeRootFolder = {
-    fg = colors.red,
-    bold = true,
-  },
+local hlgroups = {
+    NvimTreeFolderName = { fg = mocha.blue },
+    NvimTreeFolderIcon = { fg = mocha.blue },
+    NvimTreeNormal = { fg = mocha.text, bg = mocha.mantle },
+    NvimTreeOpenedFolderName = { fg = mocha.peach },
+    NvimTreeEmptyFolderName = { fg = mocha.blue },
+    NvimTreeIndentMarker = { fg = mocha.overlay0 },
+    NvimTreeWinSeparator = {
+        fg = mocha.base,
+        bg = mocha.base,
+    },
+    NvimTreeRootFolder = { fg = mocha.lavender, bold = true },
+    NvimTreeSymlink = { fg = mocha.pink },
+    NvimTreeStatuslineNc = { fg = mocha.mantle, bg = mocha.mantle },
+    NvimTreeGitDirty = { fg = mocha.yellow },
+    NvimTreeGitNew = { fg = mocha.blue },
+    NvimTreeGitDeleted = { fg = mocha.red },
+    NvimTreeSpecialFile = { fg = mocha.flamingo },
+    NvimTreeImageFile = { fg = mocha.text },
+    NvimTreeOpenedFile = { fg = mocha.pink },
 }
+
+for hl, col in pairs(hlgroups) do
+    vim.api.nvim_set_hl(0, hl, col)
+end
+
+vim.api.nvim_command("redraw")

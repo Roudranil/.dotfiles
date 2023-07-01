@@ -10,7 +10,8 @@ options = {
         nvimtree = true,
         gitsigns = true,
         mason = true,
-        treesitter = true
+        treesitter = true,
+        which_key = true,
     },
     term_colors = true,
     dim_inactive = {

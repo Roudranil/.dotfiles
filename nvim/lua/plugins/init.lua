@@ -65,26 +65,12 @@ local plugins = {
             return require "plugins.configs.nvimtree"
         end,
         config = function(_, opts)
-            dofile(vim.g.base46_cache .. "nvimtree")
+            -- dofile(vim.g.base46_cache .. "nvimtree")
+            require("base46.integrations.nvimtree")
             require("nvim-tree").setup(opts)
         end,
     },
 
-    -- indent lines
-    -- {
-    --     "lukas-reineke/indent-blankline.nvim",
-    --     init = function()
-    --         require("core.utils").lazy_load "indent-blankline.nvim"
-    --     end,
-    --     config = function()
-    --         require("base46.integrations.blankline")
-    --         require("indent_blankline").setup({
-    --             space_char_blankline = " ",
-    --             show_current_context = true,
-    --             show_current_context_start = true,
-    --         })
-    --     end
-    -- },
     {
         "lukas-reineke/indent-blankline.nvim",
         init = function()
@@ -271,7 +257,7 @@ local plugins = {
             return require "plugins.configs.telescope"
         end,
         config = function(_, opts)
-            local hlgroups = require("base46.integrations.telescope")
+            local _ = require("base46.integrations.telescope")
             local telescope = require "telescope"
             telescope.setup(opts)
 
@@ -281,6 +267,19 @@ local plugins = {
             end
         end,
     },
+
+    {
+        "folke/which-key.nvim",
+        keys = { "<leader>", '"', "'", "`", "c", "v", "g", "<C-w>" },
+        init = function ()
+            require("core.utils").load_mappings("whichkey")
+        end,
+        config = function (_, opts)
+            require("which-key").setup(opts)
+            _ = require("base46.integrations.whichkey")
+        end,
+        lazy = false
+    }
 }
 
 local config = require("core.utils").load_config()

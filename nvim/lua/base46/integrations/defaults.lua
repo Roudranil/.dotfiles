@@ -1,8 +1,8 @@
 local colors = require("base46").get_theme_tb "base_30"
 local theme = require("base46").get_theme_tb "base_16"
+local mocha = require("base46.themes.catppuccin").mocha
 
 local generate_color = require("base46.colors").change_hex_lightness
-print("hi from base46.defaults")
 local defaults = {
     MatchWord = {
         bg = colors.grey,
@@ -123,7 +123,8 @@ local defaults = {
     },
 
     Visual = {
-        bg = theme.base02,
+        bg = theme.base04,
+        fg = colors.white
     },
 
     VisualNOS = {
