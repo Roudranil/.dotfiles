@@ -1,4 +1,3 @@
-dofile(vim.g.base46_cache .. "lsp")
 require "ui.lsp"
 
 local M = {}

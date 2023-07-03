@@ -2,7 +2,7 @@ local options = {
     ensure_installed = {
         -- python
         "pyright",
-        "mypy",
+        -- "mypy",
         "ruff",
         "black",
 

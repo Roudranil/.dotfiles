@@ -1,21 +1,47 @@
--- for plugins
--- in order to load mappings, use
--- init = function()
---     require("core.utils").load_mappings "module_name"
--- end,
--- in the table
-
 local plugins = {
     'nvim-lua/plenary.nvim',
-    -- nvchad properietary ui stuff
+
+    -- colorschemes
     {
-        "NvChad/base46",
-        branch = "v2.0",
-        build = function()
-            require("base46").load_all_highlights()
-            _ = require("base46.integrations.defaults")
+        'catppuccin/nvim',
+        name = 'catppuccin',
+        lazy = false,
+        opts = function()
+            return require("plugins.configs.catppuccin")
+        end,
+        config = function(_, opts)
+            require("catppuccin").setup(opts)
         end,
     },
+
+    -- file browser, indentation
+    {
+        "nvim-tree/nvim-web-devicons",
+        opts = function()
+            return { override = require("ui.icons").devicons }
+        end,
+        config = function(_, opts)
+            require("core.utils").load_highlights "devicons"
+            require("nvim-web-devicons").setup(opts)
+        end,
+    },
+
+    {
+        "nvim-tree/nvim-tree.lua",
+        cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+        init = function()
+            require("core.utils").load_mappings "nvimtree"
+        end,
+        opts = function()
+            return require "plugins.configs.nvimtree"
+        end,
+        config = function(_, opts)
+            require("core.utils").load_highlights "nvimtree"
+            require("nvim-tree").setup(opts)
+        end,
+    },
+
+    -- good to have for looks
     {
         "NvChad/nvim-colorizer.lua",
         init = function()
@@ -31,46 +57,6 @@ local plugins = {
         end,
     },
 
-    -- colourschemes
-    {
-        'catppuccin/nvim',
-        name = 'catppuccin',
-        lazy = false,
-        opts = function()
-            return require("plugins.configs.catppuccin")
-        end,
-        config = function(_, opts)
-            require("catppuccin").setup(opts)
-        end,
-    },
-
-    -- nvim tree
-    {
-        "nvim-tree/nvim-web-devicons",
-        opts = function()
-            return { override = require("ui.icons").devicons }
-        end,
-        config = function(_, opts)
-            dofile(vim.g.base46_cache .. "devicons")
-            require("nvim-web-devicons").setup(opts)
-        end,
-    },
-    {
-        "nvim-tree/nvim-tree.lua",
-        cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-        init = function()
-            require("core.utils").load_mappings "nvimtree"
-        end,
-        opts = function()
-            return require "plugins.configs.nvimtree"
-        end,
-        config = function(_, opts)
-            -- dofile(vim.g.base46_cache .. "nvimtree")
-            require("base46.integrations.nvimtree")
-            require("nvim-tree").setup(opts)
-        end,
-    },
-
     {
         "lukas-reineke/indent-blankline.nvim",
         init = function()
@@ -81,12 +67,11 @@ local plugins = {
         end,
         config = function(_, opts)
             require("core.utils").load_mappings "blankline"
-            require("base46.integrations.blankline")
+            require("core.utils").load_highlights "blankline"
             require("indent_blankline").setup(opts)
         end,
     },
 
-    -- git signs
     {
         "lewis6991/gitsigns.nvim",
         ft = { "gitcommit", "diff" },
@@ -109,13 +94,12 @@ local plugins = {
             return require "plugins.configs.gitsigns"
         end,
         config = function(_, opts)
-            -- dofile(vim.g.base46_cache .. "git")
-            dofile("/home/rudy/.config/nvim/lua/base46/integrations/git.lua")
+            require("core.utils").load_highlights "git"
             require("gitsigns").setup(opts)
         end,
     },
 
-    -- lsp
+    -- lsp and cmp
     {
         "williamboman/mason.nvim",
         cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUninstall", "MasonUninstallAll", "MasonLog" },
@@ -123,7 +107,7 @@ local plugins = {
             return require "plugins.configs.mason"
         end,
         config = function(_, opts)
-            dofile(vim.g.base46_cache .. "mason")
+            require("core.utils").load_highlights "mason"
             require("mason").setup(opts)
 
             -- custom nvchad cmd to install all mason binaries listed
@@ -141,6 +125,7 @@ local plugins = {
             require("core.utils").lazy_load "nvim-lspconfig"
         end,
         config = function()
+            require("core.utils").load_highlights "lsp"
             require "plugins.configs.lspconfig"
         end,
     },
@@ -197,9 +182,11 @@ local plugins = {
             return require "plugins.configs.cmp"
         end,
         config = function(_, opts)
+            require("core.utils").load_highlights "cmp"
             require("cmp").setup(opts)
         end,
     },
+
     -- treesitter
     {
         "nvim-treesitter/nvim-treesitter",
@@ -212,15 +199,24 @@ local plugins = {
             return require "plugins.configs.treesitter.treesitter"
         end,
         config = function(_, opts)
-            -- dofile(vim.g.base46_cache .. "syntax")
+            require("core.utils").load_highlights "treesitter"
             require("nvim-treesitter.configs").setup(opts)
         end,
     },
 
+    {
+        "nvim-treesitter/playground",
+        opts = function()
+            return require("plugins.configs.treesitter.playground")
+        end,
+        config = function(_, opts)
+            require("nvim-treesitter.configs").setup(opts)
+        end,
+        event = 'BufRead'
+    },
 
     -- lines
     -- statusline
-
     {
         "nvim-lualine/lualine.nvim",
         opts = function()
@@ -232,6 +228,7 @@ local plugins = {
         lazy = false,
     },
 
+    -- bufferline
     {
         'akinsho/bufferline.nvim',
         version = "*",
@@ -240,6 +237,7 @@ local plugins = {
             return require("plugins.configs.bufferline")
         end,
         config = function(_, opts)
+            require("core.utils").load_highlights "bufferline"
             require("bufferline").setup(opts)
         end,
         lazy = false,
@@ -257,7 +255,7 @@ local plugins = {
             return require "plugins.configs.telescope"
         end,
         config = function(_, opts)
-            local _ = require("base46.integrations.telescope")
+            local _ = require("colorscheme.integrations.telescope")
             local telescope = require "telescope"
             telescope.setup(opts)
 
@@ -271,17 +269,24 @@ local plugins = {
     {
         "folke/which-key.nvim",
         keys = { "<leader>", '"', "'", "`", "c", "v", "g", "<C-w>" },
-        init = function ()
+        init = function()
             require("core.utils").load_mappings("whichkey")
         end,
-        config = function (_, opts)
+        config = function(_, opts)
             require("which-key").setup(opts)
-            _ = require("base46.integrations.whichkey")
+            require("colorscheme.integrations.whichkey")
+        end,
+        lazy = false
+    },
+
+    {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
         end,
         lazy = false
     }
 }
 
-local config = require("core.utils").load_config()
-
-require("lazy").setup(plugins, config.lazy_nvim)
+local config = require "plugins.configs.lazy_nvim"
+require("lazy").setup(plugins, config)

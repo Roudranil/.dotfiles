@@ -1,5 +1,5 @@
-require "custom.options"
-require "custom.autocommands"
+require "core.options"
+-- require "core.autocommands"
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -17,6 +17,5 @@ vim.opt.rtp:prepend(lazypath)
 -- plugins
 require "plugins"
 
--- colourschemes and highlights
+-- colorschemes
 vim.cmd.colorscheme "catppuccin"
-_ = require("base46.integrations.defaults")
