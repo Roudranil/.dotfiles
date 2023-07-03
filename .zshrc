@@ -32,7 +32,7 @@ eval "$(starship init zsh)"
 eval "$(feh --bg-scale ~/.dotfiles/wallpapers/night-city.png)"
 
 alias hx='helix'
-alias ls='exa --icons'
+alias ls='exa --icons --git'
 alias cmi-code='code /data/cmi/notes/'
 eval "$(zoxide init zsh)"
 alias cd='z'
