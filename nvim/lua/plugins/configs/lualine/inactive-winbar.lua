@@ -1,5 +1,4 @@
 local mocha = require("colorscheme.theme.catppuccin")
-print("hell1o")
 local inactive_winbar = {
     lualine_a = {},
     lualine_b = {},

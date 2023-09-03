@@ -8,32 +8,26 @@ local sections = {
     lualine_z = {},
     -- These will be filled later
     lualine_c = {},
-    lualine_x = {},
+    lualine_x = {}
 }
 
 local conditions = {
     buffer_not_empty = function()
         return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
     end,
-    hide_in_width = function()
-        return vim.fn.winwidth(0) > 80
-    end,
+    hide_in_width = function() return vim.fn.winwidth(0) > 80 end,
     check_git_workspace = function()
         local filepath = vim.fn.expand('%:p:h')
         local gitdir = vim.fn.finddir('.git', filepath .. ';')
         return gitdir and #gitdir > 0 and #gitdir < #filepath
-    end,
+    end
 }
 
 -- Inserts a component in lualine_c at left section
-local function ins_left(component)
-    table.insert(sections.lualine_c, component)
-end
+local function ins_left(component) table.insert(sections.lualine_c, component) end
 
 -- Inserts a component in lualine_x at right section
-local function ins_right(component)
-    table.insert(sections.lualine_x, component)
-end
+local function ins_right(component) table.insert(sections.lualine_x, component) end
 
 local mode_color = {
     n = colors.red,
@@ -55,18 +49,14 @@ local mode_color = {
     rm = colors.cyan,
     ['r?'] = colors.cyan,
     ['!'] = colors.red,
-    t = colors.red,
+    t = colors.red
 }
 
 -- edge bars
 ins_left {
-    function()
-        return '▊'
-    end,
-    color = function(section)
-        return { fg = mode_color[vim.fn.mode()] }
-    end,                               -- Sets highlighting of component
-    padding = { left = 0, right = 1 }, -- We don't need space before this
+    function() return '▊' end,
+    color = function(section) return {fg = mode_color[vim.fn.mode()]} end, -- Sets highlighting of component
+    padding = {left = 0, right = 1} -- We don't need space before this
 }
 
 ins_left {
@@ -84,7 +74,7 @@ ins_left {
             S = '  Select Line',
             [''] = '  Select Block',
             ic = '    Insert Cmp',
-            R = '   Replace',
+            R = '   Replace'
             -- Rv = 'Rv',
             -- cv = 'cv',
             -- ce = 'ce',
@@ -99,9 +89,9 @@ ins_left {
     end,
     color = function()
         -- auto change color according to neovims mode
-        return { fg = mode_color[vim.fn.mode()] }
+        return {fg = mode_color[vim.fn.mode()]}
     end,
-    padding = { right = 1 },
+    padding = {right = 1}
 }
 
 -- ins_left {
@@ -134,26 +124,22 @@ ins_left {
 
 -- ins_left { 'location' }
 
-ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
+ins_left {'progress', color = {fg = colors.fg, gui = 'bold'}}
 
-ins_left {
-    'diagnostics',
-    sources = { 'nvim_diagnostic' },
-    symbols = { error = ' ', warn = ' ', info = ' ' },
-    diagnostics_color = {
-        color_error = { fg = colors.red },
-        color_warn = { fg = colors.yellow },
-        color_info = { fg = colors.cyan },
-    },
-}
+-- ins_left {
+--     'diagnostics',
+--     sources = { 'nvim_diagnostic' },
+--     symbols = { error = ' ', warn = ' ', info = ' ' },
+--     diagnostics_color = {
+--         color_error = { fg = colors.red },
+--         color_warn = { fg = colors.yellow },
+--         color_info = { fg = colors.cyan },
+--     },
+-- }
 
 -- Insert mid section. You can make any number of sections in neovim :)
 -- for lualine it's any number greater then 2
-ins_left {
-    function()
-        return '%='
-    end,
-}
+ins_left {function() return '%=' end}
 
 ins_left {
     -- Lsp server name .
@@ -161,9 +147,7 @@ ins_left {
         local msg = 'No Active Lsp'
         local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
         local clients = vim.lsp.get_active_clients()
-        if next(clients) == nil then
-            return msg
-        end
+        if next(clients) == nil then return msg end
         for _, client in ipairs(clients) do
             local filetypes = client.config.filetypes
             if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
@@ -173,26 +157,22 @@ ins_left {
         return msg
     end,
     icon = ' :',
-    color = function()
-        return { fg = colors.grey_fg2, gui = 'bold' }
-    end,
+    color = function() return {fg = colors.grey_fg2, gui = 'bold'} end
 }
 
 -- Add components to right sections
 ins_right {
-    'o:encoding',       -- option component same as &encoding in viml
+    'o:encoding', -- option component same as &encoding in viml
     fmt = string.upper, -- I'm not sure why it's upper case either ;)
     cond = conditions.hide_in_width,
-    color = { fg = colors.custom_blue_grey },
+    color = {fg = colors.custom_blue_grey}
 }
 
 ins_right {
-    function()
-        return vim.bo.filetype
-    end,
+    function() return vim.bo.filetype end,
     -- fmt = string.upper,
     icons_enabled = true, -- I think icons are cool but Eviline doesn't have them. sigh
-    color = { fg = colors.green },
+    color = {fg = colors.green}
 }
 
 local function split(input, delimiter)
@@ -216,7 +196,7 @@ end
 
 ins_right {
     get_venv,
-    color = { fg = colors.grey_fg, gui = 'bold' },
+    color = {fg = colors.grey_fg, gui = 'bold'},
     cond = function()
         if vim.env.VIRTUAL_ENV and vim.bo.filetype == 'python' then
             return true
@@ -226,34 +206,25 @@ ins_right {
     end
 }
 
-
-ins_right {
-    'branch',
-    icon = '󰘬',
-    color = { fg = colors.white, gui = 'bold' },
-}
+ins_right {'branch', icon = '󰘬', color = {fg = colors.white, gui = 'bold'}}
 
 ins_right {
     'diff',
     -- Is it me or the symbol for modified us really weird
-    symbols = { added = ' ', modified = '󰏬 ', removed = ' ' },
+    symbols = {added = ' ', modified = '󰏬 ', removed = ' '},
     diff_color = {
-        added = { fg = colors.custom_bright_green },
-        modified = { fg = colors.custom_bright_orange },
-        removed = { fg = colors.custom_bright_red },
+        added = {fg = colors.custom_bright_green},
+        modified = {fg = colors.custom_bright_orange},
+        removed = {fg = colors.custom_bright_red}
     },
-    cond = conditions.hide_in_width,
+    cond = conditions.hide_in_width
 }
 
 -- edge bar
 ins_right {
-    function()
-        return '▊'
-    end,
-    color = function(section)
-        return { fg = mode_color[vim.fn.mode()] }
-    end,
-    padding = { left = 1 },
+    function() return '▊' end,
+    color = function(section) return {fg = mode_color[vim.fn.mode()]} end,
+    padding = {left = 1}
 }
 
 return sections

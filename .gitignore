@@ -2,3 +2,4 @@
 .vscode/
 tmux/
 .mypy_cache/
+**test.py

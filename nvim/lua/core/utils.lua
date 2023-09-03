@@ -1,18 +1,21 @@
 local M = {}
 
-local function map(mode, lhs, rhs, opts)
+local function map(mode, lhs, rhs, opts, other_opts)
     local options = { noremap = true, silent = true }
     if opts then
         options = vim.tbl_extend("force", options, opts)
+    end
+    if other_opts then
+        options = vim.tbl_extend("force", options, other_opts)
     end
     vim.keymap.set(mode, lhs, rhs, options)
 end
 
 -- load mappings
-M.load_mappings = function(plugin)
+M.load_mappings = function(plugin, other_opts)
     local mappings = require("core.mappings")[plugin]
     for _, maps in ipairs(mappings) do
-        map(maps[1], maps[2], maps[3], { desc = maps[4] })
+        map(maps[1], maps[2], maps[3], { desc = maps[4] }, other_opts)
     end
 end
 

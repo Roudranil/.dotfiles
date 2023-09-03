@@ -9,7 +9,7 @@ local hlgroups = {
     NvimTreeEmptyFolderName = { fg = mocha.blue },
     NvimTreeIndentMarker = { fg = mocha.overlay0 },
     NvimTreeWinSeparator = {
-        fg = mocha.base,
+        fg = mocha.surface1,
         bg = mocha.base,
     },
     NvimTreeRootFolder = { fg = mocha.lavender, bold = true },
@@ -21,7 +21,7 @@ local hlgroups = {
     NvimTreeSpecialFile = { fg = mocha.flamingo },
     NvimTreeImageFile = { fg = mocha.text },
     NvimTreeOpenedFile = { fg = mocha.pink },
-    NvimTreeWindowPicker = { fg = mocha.red, bg = colors.bg }
+    NvimTreeWindowPicker = { fg = mocha.red, bg = colors.bg },
 }
 
 return hlgroups

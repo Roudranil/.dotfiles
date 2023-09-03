@@ -191,5 +191,5 @@ ui {
     }
 }
 
-default_layout "default"
+default_layout "compact"
 default_shell "zsh"

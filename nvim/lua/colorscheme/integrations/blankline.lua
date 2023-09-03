@@ -4,7 +4,7 @@ local hlgroups = {
     IndentBlanklineChar = { fg = colors.surface },
     IndentBlanklineSpaceChar = { fg = colors.space, nocombine = true },
     IndentBlanklineContextChar = { fg = colors.line },
-    IndentBlanklineContextStart = { underline = true, sp = colors.line },
+    IndentBlanklineContextStart = { underline = true, sp = colors.line, fg = colors.line },
     IndentBlanklineContextSpaceChar = { underline = true, sp = colors.line }
 }
 

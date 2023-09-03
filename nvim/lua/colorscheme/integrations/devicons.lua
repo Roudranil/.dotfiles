@@ -17,7 +17,7 @@ return {
     DevIconmp4 = { fg = colors.white },
     DevIconout = { fg = colors.white },
     DevIconpng = { fg = colors.dark_purple },
-    DevIconpy = { fg = colors.cyan },
+    DevIconpy = { fg = colors.yellow },
     DevIcontoml = { fg = colors.blue },
     DevIconts = { fg = colors.teal },
     DevIconttf = { fg = colors.white },

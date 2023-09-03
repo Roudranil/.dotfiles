@@ -6,5 +6,6 @@ return {
     ["@field.lua"] = { fg = mocha.flamingo },
     ["@keyword.lua"] = { fg = mocha.sky, bold = true },
     ["@keyword.return.lua"] = { link = "@keyword.lua" },
-    ["@repeat.lua"] = { link = "@keyword.lua" }
+    ["@repeat.lua"] = { link = "@keyword.lua" },
+    ["@variable.lua"] = { fg = mocha.lavender, italic = true }
 }
