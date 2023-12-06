@@ -29,7 +29,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
-eval "$(feh --bg-scale ~/.dotfiles/wallpapers/naruto.png)"
+# eval "$(feh --bg-scale ~/.dotfiles/wallpapers/futuristic-city-mocha.png)"
 
 alias hx='helix'
 alias ls='exa --icons --git'

@@ -7,6 +7,7 @@ format = """
   $python\
   $lua\
   $rlang\
+  $nodejs\
   $fill\
   $cmd_duration\
   $jobs\
@@ -74,6 +75,10 @@ palette = 'catppuccin_mocha'
   format = 'via [$symbol($version )]($style)'
   style = 'bold teal'
   symbol = 'ﳒ '  
+
+[nodejs]
+  format =  "via [$symbol($version )]($style)"
+  style = 'bold green'
 
 [jobs]
   symbol = '󱥸 '

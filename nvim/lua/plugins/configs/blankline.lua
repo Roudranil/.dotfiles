@@ -1,24 +1,25 @@
-local options = {
-    indentLine_enabled = 1,
-    filetype_exclude = {
-        "help",
-        "terminal",
-        "lazy",
-        "lspinfo",
-        "TelescopePrompt",
-        "TelescopeResults",
-        "mason",
-        "nvdash",
-        "nvcheatsheet",
-        "",
-    },
-    buftype_exclude = { "terminal" },
-    show_trailing_blankline_indent = false,
-    show_first_indent_level = true,
-    show_current_context = true,
-    show_current_context_start = true,
-    space_char_blankline = " ",
-    indent_blankline_use_treesitter = true,
-}
-
+-- local options = {
+--     indentLine_enabled = 1,
+--     filetype_exclude = {
+--         "help",
+--         "terminal",
+--         "lazy",
+--         "lspinfo",
+--         "TelescopePrompt",
+--         "TelescopeResults",
+--         "mason",
+--         "nvdash",
+--         "nvcheatsheet",
+--         "",
+--     },
+--     buftype_exclude = { "terminal" },
+--     show_trailing_blankline_indent = false,
+--     show_first_indent_level = true,
+--     show_current_context = true,
+--     show_current_context_start = true,
+--     space_char_blankline = " ",
+--     indent_blankline_use_treesitter = true,
+-- }
+--
+local options = {enabled = true, debounce = 100, indent = {char = '┃'}}
 return options

@@ -20,13 +20,13 @@ window:
 
 font:
   normal:
-    family: VictorMono Nerd Font
+    family: VictorMono NF
     style: Regular
   bold:
-    family: VictorMono Nerd Font
+    family: VictorMono NF
     style: Bold
   italic:
-    family: VictorMono Nerd Font
+    family: VictorMono NF
     style: Italic
 
   size: 11
