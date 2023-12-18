@@ -1,124 +1,124 @@
 format = """
-  $os\
-  $directory\
-  $git_branch\
-  $git_status\
-  $git_metrics\
-  $python\
-  $lua\
-  $rlang\
-  $nodejs\
-  $fill\
-  $cmd_duration\
-  $jobs\
-  $line_break\
-  $character
+    $os\
+    $directory\
+    $git_branch\
+    $git_status\
+    $git_metrics\
+    $python\
+    $lua\
+    $rlang\
+    $nodejs\
+    $fill\
+    $cmd_duration\
+    $jobs\
+    $line_break\
+    $character
 """
 
 palette = 'catppuccin_mocha'
 
 [os]
-  style = 'bold #ffffff'
-  disabled = false
-  format = '[$symbol ]($style)'
+    style = 'bold #ffffff'
+    disabled = false
+    format = '[$symbol ]($style)'
 
 [os.symbols]
-  Arch = ''
+    Arch = ''
 
 [username]
-  show_always = true
-  # style_user = "bold #e6a176"
-  style_user = 'bold peach'
-  format = '[$user]($style)'
+    show_always = true
+    # style_user = "bold #e6a176"
+    style_user = 'bold peach'
+    format = '[$user]($style)'
 
 [hostname]
-  ssh_only = false
-  format = '[\[@$hostname\]]($style) at '
-  # style = 'bold #FF8200'
-  style = 'bold blue'
+    ssh_only = false
+    format = '[\[@$hostname\]]($style) at '
+    # style = 'bold #FF8200'
+    style = 'bold blue'
 
 [directory]
-  truncation_length = 4
-  style = 'bold sapphire'
-  format = ' at [$path]($style)[$read_only]($read_only_style) '
+    truncation_length = 4
+    style = 'bold sapphire'
+    format = ' at [$path]($style)[$read_only]($read_only_style) '
 
 
 [python]
-  format = 'via [${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
-  symbol = ' '
-  detect_extensions = ['py', 'ipynb']
+    format = 'via [${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+    symbol = ' '
+    detect_extensions = ['py', 'ipynb']
 
 [git_branch]
-  style = 'bold #e1562c'
-  format = 'on [$symbol$branch(:$remote_branch)]($style)'
-  symbol = ' '
+    style = 'bold #e1562c'
+    format = 'on [$symbol$branch(:$remote_branch)]($style)'
+    symbol = ' '
 
 [git_status]
-  staged = '[++${count} ](bold #CD00DB)'
-  ahead = '[${count} ](bold #B7DF00)'
-  diverged = '⇕ [${ahead_count}](bold #7F00DF) : [${behind_count}](bold #7F00DF)'
-  behind = '[${count} ](bold #F39C12)'
-  up_to_date = '[](bold #58D68D)'
-  untracked = '[?${count} ](bold #EC7063)'
-  modified = '[!${count} ](bold #05C2EB)'
-  deleted = '[✘ ${count} ](bold #A80047)'
-  renamed = '[󱞪${count} ](bold #04C88B)'
-  format = ' [$all_status$ahead_behind]($style) '
-  style = 'bold #e1562c'
+    staged = '[++${count} ](bold #CD00DB)'
+    ahead = '[${count} ](bold #B7DF00)'
+    diverged = '⇕ [${ahead_count}](bold #7F00DF) : [${behind_count}](bold #7F00DF)'
+    behind = '[${count} ](bold #F39C12)'
+    up_to_date = '[](bold #58D68D)'
+    untracked = '[?${count} ](bold #EC7063)'
+    modified = '[!${count} ](bold #05C2EB)'
+    deleted = '[✘ ${count} ](bold #A80047)'
+    renamed = '[󱞪${count} ](bold #04C88B)'
+    format = ' [$all_status$ahead_behind]($style) '
+    style = 'bold #e1562c'
 
 
 [lua]
-  format = 'via [$symbol($version )]($style)'
-  symbol = '󰢱 '
+    format = 'via [$symbol($version )]($style)'
+    symbol = '󰢱 '
 
 [rlang]
-  format = 'via [$symbol($version )]($style)'
-  style = 'bold teal'
-  symbol = 'ﳒ '  
+    format = 'via [$symbol($version )]($style)'
+    style = 'bold teal'
+    symbol = 'ﳒ '
 
 [nodejs]
-  format =  "via [$symbol($version )]($style)"
-  style = 'bold green'
+    format = "via [$symbol($version )]($style)"
+    style = 'bold green'
 
 [jobs]
-  symbol = '󱥸 '
+    symbol = '󱥸 '
 
 [fill]
-  symbol = ' '
+    symbol = ' '
 
 [character]
-  # success_symbol = '[❯](bold green) '
-  success_symbol = '[ ](bold green)'
-  error_symbol = '[✗](bold red) '
+    # success_symbol = '[❯](bold green) '
+    success_symbol = '[ ](bold green)'
+    error_symbol = '[✗](bold red) '
 
 [git_metrics]
-  added_style = 'bold lavender'
-  format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+    added_style = 'bold lavender'
+    format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [palettes.catppuccin_mocha]
-  rosewater = "#f5e0dc"
-  flamingo = "#f2cdcd"
-  pink = "#f5c2e7"
-  mauve = "#cba6f7"
-  red = "#f38ba8"
-  maroon = "#eba0ac"
-  peach = "#fab387"
-  yellow = "#f9e2af"
-  green = "#a6e3a1"
-  teal = "#94e2d5"
-  sky = "#89dceb"
-  sapphire = "#74c7ec"
-  blue = "#89b4fa"
-  lavender = "#b4befe"
-  text = "#cdd6f4"
-  subtext1 = "#bac2de"
-  subtext0 = "#a6adc8"
-  overlay2 = "#9399b2"
-  overlay1 = "#7f849c"
-  overlay0 = "#6c7086"
-  surface2 = "#585b70"
-  surface1 = "#45475a"
-  surface0 = "#313244"
-  base = "#1e1e2e"
-  mantle = "#181825"
-  crust = "#11111b"
+    rosewater = "#f5e0dc"
+    flamingo = "#f2cdcd"
+    pink = "#f5c2e7"
+    mauve = "#cba6f7"
+    red = "#f38ba8"
+    maroon = "#eba0ac"
+    peach = "#fab387"
+    yellow = "#f9e2af"
+    green = "#a6e3a1"
+    teal = "#94e2d5"
+    sky = "#89dceb"
+    sapphire = "#74c7ec"
+    blue = "#89b4fa"
+    lavender = "#b4befe"
+    text = "#cdd6f4"
+    subtext1 = "#bac2de"
+    subtext0 = "#a6adc8"
+    overlay2 = "#9399b2"
+    overlay1 = "#7f849c"
+    overlay0 = "#6c7086"
+    surface2 = "#585b70"
+    surface1 = "#45475a"
+    surface0 = "#313244"
+    base = "#1e1e2e"
+    mantle = "#181825"
+    crust = "#11111b"

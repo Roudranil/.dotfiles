@@ -3,3 +3,4 @@
 tmux/
 .mypy_cache/
 **test.py
+mpv/watch_later/
