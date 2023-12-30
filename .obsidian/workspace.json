@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f1d37af08ee3eb61",
+        "id": "f9fb71e9524a13d5",
         "type": "tabs",
         "children": [
           {
-            "id": "2fafae5076e43883",
+            "id": "d0129f085934e46f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Trading.md",
-                "mode": "source",
+                "file": "roadmap.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -64,12 +64,22 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "6caccd9c8002a732",
+            "type": "leaf",
+            "state": {
+              "type": "file-tree-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "1a19f3758beefbde",
@@ -85,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Trading.md",
+                "file": "roadmap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Trading.md",
+                "file": "roadmap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Trading.md"
+                "file": "roadmap.md"
               }
             }
           },
@@ -143,7 +153,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -165,11 +177,22 @@
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-advanced-slides:Show Slide Preview": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "2fafae5076e43883",
+  "active": "d0129f085934e46f",
   "lastOpenFiles": [
+    "roadmap.md",
+    "w2v Summary.md",
+    "w2v Summary submission.md",
+    "w2v-bert.pdf",
+    "Excalidraw/Drawing 2023-12-29 10.17.20.excalidraw.md",
+    "Excalidraw/Drawing 2023-12-29 10.17.20.excalidraw.png",
+    "Excalidraw/Drawing 2023-12-29 10.17.20.excalidraw.svg",
+    "Excalidraw/Drawing 2023-08-22 14.50.19.excalidraw.md",
+    "Excalidraw/Drawing 2023-11-06 17.47.15.excalidraw.md",
+    "Trading.md",
     "Technical analysis.md",
     "Excalidraw/Drawing 2023-11-14 11.15.08.excalidraw.md",
     "Excalidraw/coals.md",
@@ -187,25 +210,17 @@
     "Excalidraw/word2vec-original-paper-annotated.pdf.md",
     "cs224n-wordvector-1.pdf",
     "Excalidraw",
-    "Excalidraw/Drawing 2023-11-06 17.47.15.excalidraw.md",
     "What we want to do.md",
-    "Trading.md",
     "word-embeddings-jurafsky-martin.pdf",
-    "word2vec-original-paper.pdf",
     "Portfolio management.md",
     "Short notes.md",
     "plan.md",
     "Links.md",
     "Market instruments.md",
     "amar shradhyer menu.md",
-    "Excalidraw/Drawing 2023-08-22 14.50.19.excalidraw.md",
     "Links and stuff.md",
     "Diffusion.md",
     "Excalidraw/Diffusion.md",
-    "Proposal.md",
-    "technical-analysis/candlestick.excalidraw.md",
-    "Sheet music to sargam.md",
-    "trackers/Courses List.md",
     "Pasted Image 20230724111208_956.png",
     "Pasted Image 20230718195208_911.png",
     "Excalidraw/Diffusion.png",

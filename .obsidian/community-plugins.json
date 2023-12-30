@@ -12,5 +12,7 @@
   "obsidian-excalidraw-plugin",
   "obsidian-linter",
   "obsidian-annotator",
-  "obsidian-completr"
+  "obsidian-completr",
+  "obsidian-icon-folder",
+  "file-tree-alternative"
 ]

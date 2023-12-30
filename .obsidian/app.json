@@ -7,8 +7,9 @@
     "downscalePercent": 100
   },
   "showUnsupportedFiles": true,
-  "showLineNumber": false,
+  "showLineNumber": true,
   "spellcheck": false,
   "readableLineLength": true,
-  "strictLineBreaks": false
+  "strictLineBreaks": false,
+  "vimMode": true
 }

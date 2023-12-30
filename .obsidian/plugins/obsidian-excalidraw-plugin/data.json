@@ -58,6 +58,7 @@
   "autoExportLightAndDark": false,
   "autoexportExcalidraw": false,
   "embedType": "excalidraw",
+  "embedMarkdownCommentLinks": true,
   "embedWikiLink": true,
   "syncExcalidraw": false,
   "experimentalFileType": true,
@@ -4129,7 +4130,7 @@
             "containerId": null,
             "originalText": "-5   -4    -3   -2   -1   0      1    2     3    4    5",
             "lineHeight": 1.25,
-            "baseline": 14
+            "baseline": 13
           },
           {
             "type": "text",
@@ -4168,7 +4169,7 @@
             "containerId": null,
             "originalText": "5\n\n4\n\n3\n\n2\n\n1   \n\n0\n\n\n-1\n\n-2\n\n-3\n\n-4\n\n-5",
             "lineHeight": 1.2499999999999996,
-            "baseline": 442
+            "baseline": 441
           },
           {
             "type": "line",
@@ -5092,7 +5093,7 @@
             "containerId": null,
             "originalText": "x",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "text",
@@ -5136,7 +5137,7 @@
             "containerId": null,
             "originalText": "y",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "id": "l9cXGiz_dQPDMRBQfvCHl",
@@ -5345,7 +5346,7 @@
             "containerId": null,
             "originalText": "-5   -4    -3   -2   -1   0      1    2     3    4    5",
             "lineHeight": 1.25,
-            "baseline": 14
+            "baseline": 13
           },
           {
             "type": "text",
@@ -5384,7 +5385,7 @@
             "containerId": null,
             "originalText": "5\n\n4\n\n3\n\n2\n\n1   \n\n0\n\n\n-1\n\n-2\n\n-3\n\n-4\n\n-5",
             "lineHeight": 1.2499999999999996,
-            "baseline": 442
+            "baseline": 441
           },
           {
             "type": "line",
@@ -6308,7 +6309,7 @@
             "containerId": null,
             "originalText": "x",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "text",
@@ -6352,7 +6353,7 @@
             "containerId": null,
             "originalText": "y",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "id": "0F4vbpZF3RoNMKF0ahxEJ",
@@ -6950,7 +6951,7 @@
             "containerId": null,
             "originalText": "-5   -4   -3  -2   -1   0    1    2   3   4    5",
             "lineHeight": 1.25,
-            "baseline": 14
+            "baseline": 13
           }
         ],
         "id": "tbEQodw_eVx6OA2POnIkv",
@@ -15331,7 +15332,7 @@
             "containerId": null,
             "originalText": "0 .. 1",
             "lineHeight": 1.25,
-            "baseline": 14
+            "baseline": 13
           }
         ],
         "id": "3gKDYbkedvYrAoERk7QNz",
@@ -15377,7 +15378,7 @@
             "containerId": null,
             "originalText": "1 .. n",
             "lineHeight": 1.25,
-            "baseline": 14
+            "baseline": 13
           }
         ],
         "id": "ZErNFGlmOIk5rUm02WTEH",
@@ -15423,7 +15424,7 @@
             "containerId": null,
             "originalText": "n .. m",
             "lineHeight": 1.25,
-            "baseline": 14
+            "baseline": 13
           }
         ],
         "id": "6-zQSuMBuRGLttmJbImqE",
@@ -18502,7 +18503,7 @@
             "containerId": null,
             "originalText": "Paper",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657892707,
@@ -18780,7 +18781,7 @@
             "containerId": null,
             "originalText": "Documents",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657890337,
@@ -19303,7 +19304,7 @@
             "containerId": null,
             "originalText": "Message",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657887836,
@@ -19841,7 +19842,7 @@
             "containerId": null,
             "originalText": "Shredder",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657883588,
@@ -20435,7 +20436,7 @@
             "containerId": null,
             "originalText": "Clipboard",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657880936,
@@ -21039,7 +21040,7 @@
             "containerId": null,
             "originalText": "Notes",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657877952,
@@ -21442,7 +21443,7 @@
             "containerId": null,
             "originalText": "Table",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657874986,
@@ -21736,7 +21737,7 @@
             "containerId": null,
             "originalText": "Attachment",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657871602,
@@ -22015,7 +22016,7 @@
             "containerId": null,
             "originalText": "More",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657868518,
@@ -22523,7 +22524,7 @@
             "containerId": null,
             "originalText": "Cloud",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657865253,
@@ -22801,7 +22802,7 @@
             "containerId": null,
             "originalText": "Delete",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657862055,
@@ -23513,7 +23514,7 @@
             "containerId": null,
             "originalText": "Zip",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657856684,
@@ -24022,7 +24023,7 @@
             "containerId": null,
             "originalText": "Movie",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657853868,
@@ -24330,7 +24331,7 @@
             "containerId": null,
             "originalText": "Password",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657851083,
@@ -24638,7 +24639,7 @@
             "containerId": null,
             "originalText": "Search",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657848616,
@@ -24685,7 +24686,7 @@
             "containerId": null,
             "originalText": "Code",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -24867,7 +24868,7 @@
             "containerId": null,
             "originalText": ">_",
             "lineHeight": 1.25,
-            "baseline": 31
+            "baseline": 30
           }
         ],
         "created": 1641657845549,
@@ -25057,7 +25058,7 @@
             "containerId": null,
             "originalText": "Share",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "ellipse",
@@ -25588,7 +25589,7 @@
             "containerId": null,
             "originalText": "Upload",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657840865,
@@ -25939,7 +25940,7 @@
             "containerId": null,
             "originalText": "Download",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657826264,
@@ -25986,7 +25987,7 @@
             "containerId": null,
             "originalText": "EXE",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -26086,7 +26087,7 @@
             "containerId": null,
             "originalText": "EXE",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "ellipse",
@@ -26443,7 +26444,7 @@
             "containerId": null,
             "originalText": "APK",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -26543,7 +26544,7 @@
             "containerId": null,
             "originalText": "APK",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -26848,7 +26849,7 @@
             "containerId": null,
             "originalText": "DMG",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -26948,7 +26949,7 @@
             "containerId": null,
             "originalText": "DMG",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -27253,7 +27254,7 @@
             "containerId": null,
             "originalText": "PSD",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -27353,7 +27354,7 @@
             "containerId": null,
             "originalText": "PSD",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "diamond",
@@ -27523,7 +27524,7 @@
             "containerId": null,
             "originalText": "SKETCH",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -27832,7 +27833,7 @@
             "containerId": null,
             "originalText": "SKETCH",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657811461,
@@ -27881,7 +27882,7 @@
             "containerId": null,
             "originalText": "AI",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -27981,7 +27982,7 @@
             "containerId": null,
             "originalText": "AI",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -28372,7 +28373,7 @@
             "containerId": null,
             "originalText": "MP3",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -28627,7 +28628,7 @@
             "containerId": null,
             "originalText": "MP3",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657802661,
@@ -28676,7 +28677,7 @@
             "containerId": null,
             "originalText": "OTF",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -28776,7 +28777,7 @@
             "containerId": null,
             "originalText": "OTF",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -29053,7 +29054,7 @@
             "containerId": null,
             "originalText": "MOV",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -29153,7 +29154,7 @@
             "containerId": null,
             "originalText": "MOV",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "ellipse",
@@ -29344,7 +29345,7 @@
             "containerId": null,
             "originalText": "ISO",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "ellipse",
@@ -29443,7 +29444,7 @@
             "containerId": null,
             "originalText": "ISO",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657791627,
@@ -29490,7 +29491,7 @@
             "containerId": null,
             "originalText": "FLV",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -29590,7 +29591,7 @@
             "containerId": null,
             "originalText": "FLV",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -29749,7 +29750,7 @@
             "containerId": null,
             "originalText": "WAV",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -29849,7 +29850,7 @@
             "containerId": null,
             "originalText": "WAV",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -30045,7 +30046,7 @@
             "containerId": null,
             "originalText": "AVI",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -30145,7 +30146,7 @@
             "containerId": null,
             "originalText": "AVI",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -30656,7 +30657,7 @@
             "containerId": null,
             "originalText": "SQL",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -30881,7 +30882,7 @@
             "containerId": null,
             "originalText": "SQL",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657777526,
@@ -30930,7 +30931,7 @@
             "containerId": null,
             "originalText": "XLS",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -31030,7 +31031,7 @@
             "containerId": null,
             "originalText": "XLS",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -31203,7 +31204,7 @@
             "containerId": null,
             "originalText": "DOC",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -31303,7 +31304,7 @@
             "containerId": null,
             "originalText": "DOC",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -31542,7 +31543,7 @@
             "containerId": null,
             "originalText": "PDF",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -31642,7 +31643,7 @@
             "containerId": null,
             "originalText": "PDF",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -31756,7 +31757,7 @@
             "containerId": null,
             "originalText": "PPT",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -31856,7 +31857,7 @@
             "containerId": null,
             "originalText": "PPT",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -32168,7 +32169,7 @@
             "containerId": null,
             "originalText": "GIF",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "ellipse",
@@ -32398,7 +32399,7 @@
             "containerId": null,
             "originalText": "Gif",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657760924,
@@ -32447,7 +32448,7 @@
             "containerId": null,
             "originalText": "JPG",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -32547,7 +32548,7 @@
             "containerId": null,
             "originalText": "JPG",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -32853,7 +32854,7 @@
             "containerId": null,
             "originalText": "PNG",
             "lineHeight": 1.2499999999999993,
-            "baseline": 16
+            "baseline": 18
           },
           {
             "type": "rectangle",
@@ -33768,7 +33769,7 @@
             "containerId": null,
             "originalText": "Rust",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -33871,7 +33872,7 @@
             "containerId": null,
             "originalText": "Rust",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "ellipse",
@@ -34823,7 +34824,7 @@
             "containerId": null,
             "originalText": "R",
             "lineHeight": 1.2496102688041426,
-            "baseline": 29
+            "baseline": 28
           },
           {
             "type": "ellipse",
@@ -35675,7 +35676,7 @@
             "containerId": null,
             "originalText": "Java",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -35778,7 +35779,7 @@
             "containerId": null,
             "originalText": "Java",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -36657,7 +36658,7 @@
             "containerId": null,
             "originalText": "Webpack",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -36757,7 +36758,7 @@
             "containerId": null,
             "originalText": "Webpack",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -37326,7 +37327,7 @@
             "containerId": null,
             "originalText": "PHP",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -37432,7 +37433,7 @@
             "containerId": null,
             "originalText": "PHP",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "ellipse",
@@ -37623,7 +37624,7 @@
             "containerId": null,
             "originalText": "C#",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -37726,7 +37727,7 @@
             "containerId": null,
             "originalText": "C#",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -38222,7 +38223,7 @@
             "containerId": null,
             "originalText": "C++",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -38325,7 +38326,7 @@
             "containerId": null,
             "originalText": "C++",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -38767,7 +38768,7 @@
             "containerId": null,
             "originalText": "++",
             "lineHeight": 1.2968130676667498,
-            "baseline": 10
+            "baseline": 9
           }
         ],
         "created": 1641657622379,
@@ -38814,7 +38815,7 @@
             "containerId": null,
             "originalText": "C",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -38917,7 +38918,7 @@
             "containerId": null,
             "originalText": "C",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -39370,7 +39371,7 @@
             "containerId": null,
             "originalText": "Python",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -39473,7 +39474,7 @@
             "containerId": null,
             "originalText": "Python",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -39862,7 +39863,7 @@
             "containerId": null,
             "originalText": "Go",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -39962,7 +39963,7 @@
             "containerId": null,
             "originalText": "Go",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "text",
@@ -40252,7 +40253,7 @@
             "containerId": null,
             "originalText": "Esbuild",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "text",
@@ -40291,7 +40292,7 @@
             "containerId": null,
             "originalText": "esbuild",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "ellipse",
@@ -40500,7 +40501,7 @@
             "containerId": null,
             "originalText": "Jest",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -40603,7 +40604,7 @@
             "containerId": null,
             "originalText": "Jest",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -40963,7 +40964,7 @@
             "containerId": null,
             "originalText": "Nuxt",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -41066,7 +41067,7 @@
             "containerId": null,
             "originalText": "Nuxt",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -41275,7 +41276,7 @@
             "containerId": null,
             "originalText": "Swift",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -41378,7 +41379,7 @@
             "containerId": null,
             "originalText": "Swift",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -41658,7 +41659,7 @@
             "containerId": null,
             "originalText": "Dart",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -41758,7 +41759,7 @@
             "containerId": null,
             "originalText": "Dart",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -42105,7 +42106,7 @@
             "containerId": null,
             "originalText": "Flutter",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -42208,7 +42209,7 @@
             "containerId": null,
             "originalText": "Flutter",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -42490,7 +42491,7 @@
             "containerId": null,
             "originalText": "Shell",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "text",
@@ -42530,7 +42531,7 @@
             "containerId": null,
             "originalText": ">_",
             "lineHeight": 1.25,
-            "baseline": 31
+            "baseline": 30
           },
           {
             "type": "text",
@@ -42569,7 +42570,7 @@
             "containerId": null,
             "originalText": "Shell",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657535233,
@@ -42616,7 +42617,7 @@
             "containerId": null,
             "originalText": "Vite",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -42719,7 +42720,7 @@
             "containerId": null,
             "originalText": "Vite",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -42986,7 +42987,7 @@
             "containerId": null,
             "originalText": "Rollup",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -43089,7 +43090,7 @@
             "containerId": null,
             "originalText": "Rollup",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -43512,7 +43513,7 @@
             "containerId": null,
             "originalText": "Node",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -43612,7 +43613,7 @@
             "containerId": null,
             "originalText": "Node",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -44142,7 +44143,7 @@
             "containerId": null,
             "originalText": "TypeScript",
             "lineHeight": 1.25,
-            "baseline": 14
+            "baseline": 13
           },
           {
             "type": "text",
@@ -44182,7 +44183,7 @@
             "containerId": null,
             "originalText": "TS",
             "lineHeight": 1.25,
-            "baseline": 31
+            "baseline": 30
           },
           {
             "type": "text",
@@ -44221,7 +44222,7 @@
             "containerId": null,
             "originalText": "TypeScript",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657485616,
@@ -44268,7 +44269,7 @@
             "containerId": null,
             "originalText": "React",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -44371,7 +44372,7 @@
             "containerId": null,
             "originalText": "React",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "ellipse",
@@ -44603,7 +44604,7 @@
             "containerId": null,
             "originalText": "VUE",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -44854,7 +44855,7 @@
             "containerId": null,
             "originalText": "Vue",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657434860,
@@ -44962,7 +44963,7 @@
             "containerId": null,
             "originalText": "{;}",
             "lineHeight": 1.25,
-            "baseline": 31
+            "baseline": 30
           },
           {
             "type": "text",
@@ -45002,7 +45003,7 @@
             "containerId": null,
             "originalText": "JS",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "text",
@@ -45041,7 +45042,7 @@
             "containerId": null,
             "originalText": "JS",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "created": 1641657385525,
@@ -45088,7 +45089,7 @@
             "containerId": null,
             "originalText": "CSS",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -45188,7 +45189,7 @@
             "containerId": null,
             "originalText": "CSS",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "text",
@@ -45228,7 +45229,7 @@
             "containerId": null,
             "originalText": "{}",
             "lineHeight": 1.25,
-            "baseline": 31
+            "baseline": 30
           }
         ],
         "created": 1641657382807,
@@ -45275,7 +45276,7 @@
             "containerId": null,
             "originalText": "HTML",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "rectangle",
@@ -45375,7 +45376,7 @@
             "containerId": null,
             "originalText": "HTML",
             "lineHeight": 1.25,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "text",
@@ -45415,7 +45416,7 @@
             "containerId": null,
             "originalText": "</>",
             "lineHeight": 1.25,
-            "baseline": 31
+            "baseline": 30
           }
         ],
         "created": 1641657360822,
@@ -49137,7 +49138,7 @@
   "mdCSS": "",
   "scriptEngineSettings": {},
   "defaultTrayMode": false,
-  "previousRelease": "1.9.28",
+  "previousRelease": "2.0.13",
   "showReleaseNotes": true,
   "showNewVersionNotification": true,
   "latexBoilerplate": "\\color{blue}",
@@ -49470,5 +49471,311 @@
     "DECAY_TIME": 1000,
     "COLOR": "#ff0000"
   },
+  "embeddableMarkdownDefaults": {
+    "useObsidianDefaults": false,
+    "backgroundMatchCanvas": false,
+    "backgroundMatchElement": true,
+    "backgroundColor": "#fff",
+    "backgroundOpacity": 60,
+    "borderMatchElement": true,
+    "borderColor": "#fff",
+    "borderOpacity": 0,
+    "filenameVisible": false
+  },
+  "canvasImmersiveEmbed": true,
+  "startupScriptPath": "",
+  "openAIAPIToken": "",
+  "openAIDefaultTextModel": "gpt-3.5-turbo-1106",
+  "openAIDefaultVisionModel": "gpt-4-vision-preview",
+  "openAIDefaultImageGenerationModel": "dall-e-3",
+  "openAIURL": "https://api.openai.com/v1/chat/completions",
+  "openAIImageGenerationURL": "https://api.openai.com/v1/images/generations",
+  "openAIImageEditsURL": "https://api.openai.com/v1/images/edits",
+  "openAIImageVariationURL": "https://api.openai.com/v1/images/variations",
+  "modifierKeyConfig": {
+    "Mac": {
+      "LocalFileDragAction": {
+        "defaultAction": "image-import",
+        "rules": [
+          {
+            "shift": false,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "image-import"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": false,
+            "alt_opt": true,
+            "meta_ctrl": false,
+            "result": "link"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "image-url"
+          },
+          {
+            "shift": false,
+            "ctrl_cmd": false,
+            "alt_opt": true,
+            "meta_ctrl": false,
+            "result": "embeddable"
+          }
+        ]
+      },
+      "WebBrowserDragAction": {
+        "defaultAction": "image-url",
+        "rules": [
+          {
+            "shift": false,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "image-url"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": false,
+            "alt_opt": true,
+            "meta_ctrl": false,
+            "result": "link"
+          },
+          {
+            "shift": false,
+            "ctrl_cmd": false,
+            "alt_opt": true,
+            "meta_ctrl": false,
+            "result": "embeddable"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "image-import"
+          }
+        ]
+      },
+      "InternalDragAction": {
+        "defaultAction": "link",
+        "rules": [
+          {
+            "shift": false,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "link"
+          },
+          {
+            "shift": false,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": true,
+            "result": "embeddable"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "image"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": true,
+            "result": "image-fullsize"
+          }
+        ]
+      },
+      "LinkClickAction": {
+        "defaultAction": "new-tab",
+        "rules": [
+          {
+            "shift": false,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "active-pane"
+          },
+          {
+            "shift": false,
+            "ctrl_cmd": true,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "new-tab"
+          },
+          {
+            "shift": false,
+            "ctrl_cmd": true,
+            "alt_opt": true,
+            "meta_ctrl": false,
+            "result": "new-pane"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": true,
+            "alt_opt": true,
+            "meta_ctrl": false,
+            "result": "popout-window"
+          },
+          {
+            "shift": false,
+            "ctrl_cmd": true,
+            "alt_opt": false,
+            "meta_ctrl": true,
+            "result": "md-properties"
+          }
+        ]
+      }
+    },
+    "Win": {
+      "LocalFileDragAction": {
+        "defaultAction": "image-import",
+        "rules": [
+          {
+            "shift": false,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "image-import"
+          },
+          {
+            "shift": false,
+            "ctrl_cmd": true,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "link"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "image-url"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": true,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "embeddable"
+          }
+        ]
+      },
+      "WebBrowserDragAction": {
+        "defaultAction": "image-url",
+        "rules": [
+          {
+            "shift": false,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "image-url"
+          },
+          {
+            "shift": false,
+            "ctrl_cmd": true,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "link"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": true,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "embeddable"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "image-import"
+          }
+        ]
+      },
+      "InternalDragAction": {
+        "defaultAction": "link",
+        "rules": [
+          {
+            "shift": false,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "link"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": true,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "embeddable"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "image"
+          },
+          {
+            "shift": false,
+            "ctrl_cmd": true,
+            "alt_opt": true,
+            "meta_ctrl": false,
+            "result": "image-fullsize"
+          }
+        ]
+      },
+      "LinkClickAction": {
+        "defaultAction": "new-tab",
+        "rules": [
+          {
+            "shift": false,
+            "ctrl_cmd": false,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "active-pane"
+          },
+          {
+            "shift": false,
+            "ctrl_cmd": true,
+            "alt_opt": false,
+            "meta_ctrl": false,
+            "result": "new-tab"
+          },
+          {
+            "shift": false,
+            "ctrl_cmd": true,
+            "alt_opt": true,
+            "meta_ctrl": false,
+            "result": "new-pane"
+          },
+          {
+            "shift": true,
+            "ctrl_cmd": true,
+            "alt_opt": true,
+            "meta_ctrl": false,
+            "result": "popout-window"
+          },
+          {
+            "shift": false,
+            "ctrl_cmd": true,
+            "alt_opt": false,
+            "meta_ctrl": true,
+            "result": "md-properties"
+          }
+        ]
+      }
+    }
+  },
+  "slidingPanesSupport": false,
   "mathjaxSourceURL": "https://cdn.jsdelivr.net/npm/mathjax@3.2.1/es5/tex-svg.js"
 }

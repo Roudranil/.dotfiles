@@ -4,5 +4,6 @@
   "interfaceFontFamily": "Latin Modern Sans",
   "textFontFamily": "Latin Modern Sans",
   "monospaceFontFamily": "VictorMono Nerd Font",
-  "baseFontSize": 18
+  "baseFontSize": 18,
+  "theme": "obsidian"
 }
