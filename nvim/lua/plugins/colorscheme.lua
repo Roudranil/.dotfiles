@@ -35,6 +35,7 @@ return {
                 neotree = true,
                 noice = true,
                 notify = true,
+                rainbow_delimiters = true,
                 semantic_tokens = true,
                 styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
                     comments = { "italic" }, -- Change the style of comments

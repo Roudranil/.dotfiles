@@ -11,13 +11,22 @@ require("lazy").setup({
         -- add LazyVim and import its plugins
         { "LazyVim/LazyVim", import = "lazyvim.plugins" },
         -- import any extras modules here
+        -- extra languages
         { import = "lazyvim.plugins.extras.lang.typescript" },
         { import = "lazyvim.plugins.extras.lang.json" },
-        { import = "lazyvim.plugins.extras.lang.markdown" },
+        -- { import = "lazyvim.plugins.extras.lang.markdown" },
         { import = "lazyvim.plugins.extras.lang.python" },
         { import = "lazyvim.plugins.extras.lang.tailwind" },
         { import = "lazyvim.plugins.extras.lang.tex" },
+        -- extra formatters
+        { import = "lazyvim.plugins.extras.formatting.black" },
+        { import = "lazyvim.plugins.extras.formatting.prettier" },
+        -- editing shit
+        { import = "lazyvim.plugins.extras.editor.symbols-outline" },
+        -- ui
         { import = "lazyvim.plugins.extras.ui.mini-animate" },
+        -- util
+        { import = "lazyvim.plugins.extras.util.dot" },
         -- import/override with your plugins
         { import = "plugins" },
     },
@@ -46,5 +55,9 @@ require("lazy").setup({
                 "zipPlugin",
             },
         },
+    },
+    ui = {
+        border = "rounded",
+        size = { width = 0.6, height = 0.8 },
     },
 })

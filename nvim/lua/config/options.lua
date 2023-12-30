@@ -10,5 +10,7 @@ opt.shiftwidth = 4 -- 4 spaces indent
 opt.tabstop = 4 -- 1 tab = 4 spaces
 opt.scrolloff = 50 -- 50 lines of context
 opt.fillchars = { eob = "~" }
+opt.textwidth = 80
+opt.wrap = true
 
-print("hello")
+-- global vim config

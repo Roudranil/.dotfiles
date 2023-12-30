@@ -5,3 +5,4 @@ tmux/
 **test.py
 mpv/watch_later/
 lazygit/state*
+nvim/lazy-lock.json
