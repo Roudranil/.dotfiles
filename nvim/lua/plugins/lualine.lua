@@ -40,29 +40,29 @@ M.opts = {
                     return { fg = colors.grey_fg2, gui = "bold" }
                 end,
             },
-            {
-                function()
-                    local venv = require("venv-selector").get_active_venv()
-                    if venv then
-                        local venv_parts = vim.fn.split(venv, "/")
-                        local venv_name = venv_parts[#venv_parts]
-                        local python_version =
-                            vim.fn.systemlist({ "bash", "-c", string.format("%s/bin/python --version", venv) })[1]
-                        return string.format("(%s):   %s", venv_name, python_version)
-                    else
-                        return "Select venv"
-                    end
-                end,
-                icon = " ",
-                color = { fg = theme.text },
-                on_click = function()
-                    require("venv-selector").open()
-                end,
-                cond = function()
-                    local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-                    return (buf_ft == "python")
-                end,
-            },
+            -- {
+            --     function()
+            --         local venv = require("venv-selector").get_active_venv()
+            --         if venv then
+            --             local venv_parts = vim.fn.split(venv, "/")
+            --             local venv_name = venv_parts[#venv_parts]
+            --             local python_version =
+            --                 vim.fn.systemlist({ "bash", "-c", string.format("%s/bin/python --version", venv) })[1]
+            --             return string.format("(%s):   %s", venv_name, python_version)
+            --         else
+            --             return "Select venv"
+            --         end
+            --     end,
+            --     icon = " ",
+            --     color = { fg = theme.text },
+            --     on_click = function()
+            --         require("venv-selector").open()
+            --     end,
+            --     cond = function()
+            --         local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
+            --         return (buf_ft == "python")
+            --     end,
+            -- },
         },
     },
     winbar = {

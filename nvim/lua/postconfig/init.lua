@@ -54,8 +54,9 @@ end)(vim.diagnostic.open_float)
 
 -- Show source in diagnostics, not inline but as a floating popup
 vim.diagnostic.config({
-    virtual_text = false,
+    virtual_text = true,
     float = {
         source = "always", -- Or "if_many"
     },
+    update_in_insert = true,
 })

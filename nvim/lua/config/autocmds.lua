@@ -41,3 +41,16 @@ autocmd!
 autocmd BufRead,BufEnter *.conf set filetype=bash
 augroup end
 ]])
+
+-- syntax highlighting and lsp for .zshrc
+-- Assuming you have installed nvim-lspconfig
+local lspconfig = require("lspconfig")
+
+-- Autocommand to set filetype and attach language server
+vim.cmd([[
+  augroup ZshrcConfig
+    autocmd!
+    autocmd BufRead,BufNewFile .zshrc set filetype=bash
+    autocmd FileType bash lua require('lspconfig').bashls.setup{}
+  augroup END
+]])

@@ -48,7 +48,7 @@ return {
                     numbers = {},
                     booleans = {},
                     properties = {},
-                    types = {},
+                    types = { "italic" },
                     operators = {},
                 },
                 telescope = true,
