@@ -182,7 +182,7 @@ plugins {
     compact-bar { path "compact-bar"; }
 }
 
-pane_frames true
+pane_frames false
 theme "catppuccin-mocha"
 
 ui {
@@ -191,5 +191,5 @@ ui {
     }
 }
 
-default_layout "compact"
+default_layout "default"
 default_shell "zsh"
