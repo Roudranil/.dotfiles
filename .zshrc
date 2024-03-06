@@ -1,3 +1,4 @@
+#!/bin/bash
 export ZSH="/home/rudy/.oh-my-zsh"
 export SPACESHIP_CONFIG="/home/rudy/.config/spaceship/spaceshiprc.zsh"
 
@@ -32,7 +33,7 @@ eval "$(starship init zsh)"
 # eval "$(feh --bg-scale ~/.dotfiles/wallpapers/futuristic-city-mocha.png)"
 
 alias hx='helix'
-alias ls='exa --icons --git'
+alias ls='eza --icons --git'
 alias cmi-code='code /data/cmi/notes/'
 eval "$(zoxide init zsh)"
 alias cd='z'
@@ -40,7 +41,7 @@ alias cdi='zi'
 alias rc='nvim ~/.zshrc'
 alias data='cd /data/'
 alias nemo='nemo .'
-alias ds='vrun ~/ds'
+# alias ds='vrun ~/ds'
 alias dots='cd ~/.dotfiles'
 alias pswd='cat ~/lti-pswd.txt | xclip -selection clipboard'
 alias update-mirrorlist='sudo reflector --country India --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
@@ -106,4 +107,86 @@ function compresspdf() {
     local output_file="${input_file:r}-compressed.pdf"
 
     gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile="$output_file" "$input_file"
+}
+
+# whole python environment shenanigan
+
+VENV_DIR="/home/rudy/venvs"
+
+function colprint() (
+	text="${1#'[#'??????']'}"
+	r="${1%"$text"}"
+	r="${r%']'}"
+	r="${r#'[#'}"
+	r="${r:-FFFFFF}"
+	b="${r#????}"
+	r="${r%??}"
+	g="${r#??}"
+	r="${r%??}"
+	printf '\e[38;2;%d;%d;%dm%s\e[0m\n' "0x$r" "0x$g" "0x$b" "$text"
+)
+
+function pycreate() {
+	local name=$1
+	local requirements=$2
+	local venv_path="$VENV_DIR/$name"
+
+	if [[ -d "$venv_path" ]]; then
+		message="$(colprint "[#F38BA8]󰀦 Environment $name already exists. Do you want to overwrite it? [y/n] ")"
+		read -p "$message" overwrite
+		if [[ "$overwrite" != "y" ]]; then
+			read -p "Enter a new name for the environment: " name
+			create "$name" "$requirements_file"
+			return
+		else
+			rm -rf $venv_path
+		fi
+	fi
+
+	echo "Creating virtual environment '$name' ..."
+	python -m venv "$venv_path"
+
+	if [[ -n "$requirements" ]]; then
+		"$venv_path/bin/pip" install -r "$requirements"
+	fi
+	colprint "[#A6E3A1]󰄬  $name created successfully"
+}
+
+function pydelete() {
+	local name=$1
+	local venv_path="$VENV_DIR/$name"
+
+	if [ ! -d "$venv_path" ]; then
+		message="$(colprint "[F38BA8]󰀦 Environment $name does not exist. Do you want to create it? [y/n] ")"
+		read -p "$message" create
+		if [ "$create" == "y" ]; then
+			create "$name"
+		else
+			echo "Aborted."
+			exit 1
+		fi
+	fi
+
+	rm -rf "${venv_path}"
+	colprint "[#A6E3A1]󰄬  $name deleted successfully"
+}
+
+function pyactivate() {
+	local name=$1
+	local venv_path="$VENV_DIR/$name"
+
+	if [ ! -d "$venv_path" ]; then
+		message="$(colprint "[F38BA8]󰀦 Environment $name does not exist. Do you want to create it? [y/n] ")"
+		read -p "$message" create
+		if [ "$create" == "y" ]; then
+			create "$name"
+		else
+			echo "Aborted."
+			exit 1
+		fi
+	fi
+
+	echo "${venv_path}/bin/activate"
+	. "${venv_path}/bin/activate" || return $?
+	colprint "[#A6E3A1]󰄬  $name activated"
 }
