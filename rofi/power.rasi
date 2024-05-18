@@ -1,0 +1,125 @@
+configuration {
+    show-icons: false;
+    font: "VictorMono NF 12";
+    prompt: "  Power Manager ";
+}
+
+@theme "/dev/null"
+@import "colors.rasi"
+
+* {
+    background-color: @base;
+    text-color: @text;
+}
+
+window {
+    enableed: true;
+    width: 600px;
+    border: 1px;
+    border-color: @overlay2;
+    border-radius: 16px;
+    padding: 30px;
+    cursor: default;
+}
+
+mainbox {
+    enabled: true;
+    padding: 25px;
+    orientation: vertical;
+    background-color: transparent;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    font: "VictorMono NF Bold 14";
+    expand: false;
+    padding: 0px 0px 25px;
+    orientation: horizontal;
+    children: [ textbox-prompt-colon, dummy, prompt ];
+}
+
+textbox-prompt-colon {
+    expand: false;
+    font: inherit;
+    content: "System";
+    background-color: @base;
+    text-color: @red;
+    padding: 15px;
+}
+
+prompt {
+    enabled: 			            true;
+    padding: 			            15px;
+    text-color: 		            @subtext1;
+}
+
+dummy {
+      background-color:               transparent;
+}
+
+listview {
+    columns: 5;
+    lines: 1;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+    border-radius: 10%;
+    background-color: @mantle;
+    text-color: @text;
+    cursor: default;
+}
+
+element {
+    padding: 30px 30px;
+    border-radius: 8px;
+    background-color: transparent;
+    text-color: @text;
+    cursor: pointer;
+}
+
+element-text {
+    font: "VictorMono NF Bold 23";
+    background-color: transparent;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    cursor: inherit;
+    text-color: inherit;
+}
+
+element selected.normal {
+    background-color: @sapphire;
+    text-color: @mantle;
+}
+
+message {
+    enabled:                        true;
+    padding:                        15px;
+    border:                         0px;
+    border-radius:                  100%;
+    border-color:                   @accent;
+    background-color:               @mantle;
+    text-color:                     @text;
+}
+
+textbox {
+    background-color:               inherit;
+    text-color:                     inherit;
+    vertical-align:                 0.5;
+    horizontal-align:               0.5;
+    placeholder-color:              @text;
+    blink:                          true;
+    markup:                         true;
+}
+
+error-message {
+    padding:                        15px;
+    border:                         0px solid;
+    border-radius:                  100%;
+    border-color:                   @red;
+    background-color:               @mantle;
+    text-color:                     @red;
+}
