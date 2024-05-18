@@ -196,13 +196,18 @@ local highlights = {
     -- python
     ["@string.python"] = { fg = mocha.green, italic = true },
     ["@type.python"] = { fg = mocha.yellow },
+    -- ["@module.python"] = { link = "@type.python" },
     ["@module.name"] = { link = "@type.python" },
     ["@module.alias"] = { link = "@type.python" },
-    ["@module.import"] = { fg = mocha.yellow, italic = true },
+    ["@module.import.class"] = { fg = mocha.yellow, italic = true },
+    ["@module.import.method"] = { fg = mocha.blue, italic = true },
     ["@class.python"] = { fg = mocha.red, bold = true },
     ["@def.python"] = { fg = mocha.maroon, italic = true },
-    ["@constructor.python"] = { link = "@module.import" },
+    ["@constructor.python"] = { link = "@module.import.class" },
     ["@function.python"] = { fg = mocha.blue, italic = true },
+    ["@function.method.call.python"] = { fg = mocha.blue, italic = true },
+    ["@function.call.python"] = { fg = mocha.blue, italic = true },
+    ["@object.python"] = { fg = mocha.yellow },
 
     -- mason
     MasonHeader = { fg = mocha.base, bg = mocha.red },

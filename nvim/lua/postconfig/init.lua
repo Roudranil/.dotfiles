@@ -8,7 +8,11 @@ vim.treesitter.language.register("astro", "mdx")
 
 -- global diagnostic config
 -- vim.diagnostic.config({
---     virtual_text = false,
+--     virtual_text = {
+--         severity = {
+--             min = vim.diagnostic.severity.WARN
+--         }
+--     },
 --     float = { border = "rounded" },
 -- })
 -- wrap open_float to inspect diagnostics and use the severity color for border
@@ -54,9 +58,16 @@ end)(vim.diagnostic.open_float)
 
 -- Show source in diagnostics, not inline but as a floating popup
 vim.diagnostic.config({
-    virtual_text = true,
+    underline = {
+        severity = { min = vim.diagnostic.severity.INFO },
+    },
+    virtual_text = {
+        severity = { min = vim.diagnostic.severity.ERROR },
+    },
     float = {
         source = "always", -- Or "if_many"
     },
     update_in_insert = true,
 })
+
+-- setting python3 host prog

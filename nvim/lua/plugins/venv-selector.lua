@@ -1,3 +1,8 @@
+local function set_python_prog()
+    local venv = require("venv-selector")
+    vim.g.python3_host_prog = venv.get_active_path()
+end
+
 return {
     "linux-cultist/venv-selector.nvim",
     opts = function(_, opts)
@@ -25,6 +30,7 @@ return {
             function()
                 vim.api.nvim_command("VenvSelect")
                 vim.api.nvim_command("LspRestart")
+                set_python_prog()
             end,
             desc = "Select VirtualEnv",
         },

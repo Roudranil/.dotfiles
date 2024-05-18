@@ -18,16 +18,18 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.lang.python" },
         -- { import = "lazyvim..plugins.extras.lang.python-semshi" },
         { import = "lazyvim.plugins.extras.lang.tailwind" },
-        { import = "lazyvim.plugins.extras.lang.tex" },
+        -- { import = "lazyvim.plugins.extras.lang.tex" },
         -- extra formatters
         { import = "lazyvim.plugins.extras.formatting.black" },
         { import = "lazyvim.plugins.extras.formatting.prettier" },
         -- editing shit
-        { import = "lazyvim.plugins.extras.editor.symbols-outline" },
+        -- { import = "lazyvim.plugins.extras.editor.symbols-outline" },
         -- ui
         { import = "lazyvim.plugins.extras.ui.mini-animate" },
         -- util
         { import = "lazyvim.plugins.extras.util.dot" },
+        -- coding
+        { import = "lazyvim.plugins.extras.coding.mini-surround" },
         -- import/override with your plugins
         { import = "plugins" },
     },

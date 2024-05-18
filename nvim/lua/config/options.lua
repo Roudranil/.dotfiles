@@ -14,3 +14,4 @@ opt.textwidth = 80
 opt.wrap = true
 
 -- global vim config
+vim.g.lazyvim_python_lsp = "pyright"
