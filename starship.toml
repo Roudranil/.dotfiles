@@ -8,6 +8,7 @@ format = """
     $lua\
     $rlang\
     $nodejs\
+    $docker_context\
     $fill\
     $cmd_duration\
     $jobs\
@@ -79,6 +80,9 @@ palette = 'catppuccin_mocha'
 [nodejs]
     format = "via [$symbol($version )]($style)"
     style = 'bold green'
+
+[docker_context]
+    style = "blue bold"
 
 [jobs]
     symbol = '󱥸 '
