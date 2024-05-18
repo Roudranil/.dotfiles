@@ -1,0 +1,117 @@
+#!/bin/bash
+
+# Directory containing citra-qt.AppImage
+APP_DIR="/data/pokemon/citra-linux-appimage-20240303-0ff3440"
+
+# Directory for citra saves and backup
+CITRA_SAVES_DIR="/data/pokemon/citra"
+CITRA_BACKUP_DIR="/data/pokemon/citra-backups"
+
+# Gum colors (catppuccin mocha)
+export FOREGROUND="#cdd6f4"
+export BORDER_FOREGROUND="#f38ba8"
+export WIDTH=80
+# export GUM_CHOOSE_CURSOR_FOREGROUND=""
+export GUM_CHOOSE_SELECTED_FOREGROUND="#f2cdcd"
+
+# Function to check if citra-qt.AppImage is running
+check_citra() {
+	if pgrep -f "citra-qt.AppImage" >/dev/null; then
+		return 0 # citra-qt.AppImage is running
+	else
+		return 1 # citra-qt.AppImage is not running
+	fi
+}
+
+launch_citra() {
+	cd "$APP_DIR" || exit 1
+	./citra-qt.AppImage >/dev/null 2>&1 &
+	gum style --italic --foreground="#fab387" " citra-qt.AppImage has been started. "
+}
+
+perform_backup() {
+	cp -r "$CITRA_SAVES_DIR" "$CITRA_BACKUP_DIR"
+	gum style --italic --foreground="#a6e3a1" \
+		"[󰄭] Backed up current citra save to $CITRA_BACKUP_DIR at $(date)"
+}
+
+start_backup() {
+	MIN_2="Every 2 minutes"
+	MIN_5="Every 5 minutes"
+	MIN_10="Every 10 minutes"
+	MIN_20='Every 20 minutes'
+	SLEEP_DURATION_CHOICE=$(gum choose "$MIN_2" "$MIN_5" "$MIN_10" "$MIN_20")
+	if [[ "$SLEEP_DURATION_CHOICE" == "$MIN_2" ]]; then
+		SLEEP_DURATION=120
+	elif [[ "$SLEEP_DURATION_CHOICE" == "$MIN_5" ]]; then
+		SLEEP_DURATION=300
+	elif [[ "$SLEEP_DURATION_CHOICE" == "$MIN_10" ]]; then
+		SLEEP_DURATION=600
+	elif [[ "$SLEEP_DURATION_CHOICE" == "$MIN_20" ]]; then
+		SLEEP_DURATION=1200
+	fi
+
+	# Backup loop
+	while true; do
+		perform_backup
+		# sleep "$SLEEP_DURATION"
+		remaining_seconds="$SLEEP_DURATION"
+		iterations=$((SLEEP_DURATION / 20))
+		while ((remaining_seconds > 0)); do
+			for ((i = 0; i < iterations && remaining_seconds > 0; i++)); do
+				gum spin --spinner.foreground="#b4befe" \
+					--title="$(gum style --italic --foreground="#b4befe" "Citra is running. Waiting $remaining_seconds seconds till next backup")" \
+					-- sleep 20
+				remaining_seconds=$((remaining_seconds - 20))
+			done
+
+			# If the remaining time is less than 20 seconds, sleep for the remaining time
+			if ((remaining_seconds > 0)); then
+				gum spin --spinner.foreground="#b4befe" \
+					--title="$(gum style --italic --foreground="#b4befe" "Citra is running. Waiting $remaining_seconds seconds till next backup")" \
+					-- sleep "$remaining_seconds"
+			fi
+		done
+		if ! check_citra; then
+			perform_backup # Perform one last backup before exiting
+			gum style --italic --foreground="#f38ba8" \
+				"[] citra-qt.AppImage has stopped."
+			exit 0
+		fi
+	done
+	# gum spin --spinner="dot" --spinner.foreground="#b4befe" --title="$(gum style --italic --foreground="#b4befe" "Citra is running. Waiting upto $SLEEP_DRATION seconds till next backup")" -- sleep $SLEEP_DRATION
+
+}
+
+gum style --width=50 --align="center" --border="rounded" --foreground="#f38ba8" --bold "Welcome to PlayPokemonHQ"
+
+gum style --border="none" --width=50 --align="left" \
+	"Here we manage your pokemon playthrough." \
+	"" \
+	"We can check the running status of Citra and create timely backups of your saves." \
+	""
+
+if check_citra; then
+	gum style --bold --foreground="#eba0ac" \
+		"Citra is already running."
+	gum style --foreground="$#cdd6f4" \
+		"Do you want us to start the backup process?"
+	ACTION=$(gum choose --limit=1 "Yes" "No")
+	if [[ "$ACTION" == "Yes" ]]; then
+		start_backup
+	else
+		echo "Bye"
+	fi
+else
+	gum style --foreground="#74c7ec" \
+		"Citra is not running yet."
+	gum style --foreground="$#cdd6f4" \
+		"Do you want us to launch Citra and start backup monitoring?"
+	ACTION=$(gum choose --limit=1 "Yes" "No")
+	if [[ "$ACTION" == "Yes" ]]; then
+		launch_citra
+		start_backup
+	else
+		gum style "Bye"
+	fi
+fi
