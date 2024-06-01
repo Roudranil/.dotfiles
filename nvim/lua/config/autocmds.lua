@@ -39,8 +39,21 @@ vim.cmd([[
 augroup _conf
 autocmd!
 autocmd BufRead,BufEnter *.conf set filetype=bash
+autocmd BufRead,BufEnter */i3/config set filetype=i3config
 augroup end
 ]])
+
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+    pattern = { "*.hl", "hypr*.conf" },
+    callback = function(event)
+        print(string.format("starting hyprls for %s", vim.inspect(event)))
+        vim.lsp.start({
+            name = "hyprlang",
+            cmd = { "hyprls" },
+            root_dir = vim.fn.getcwd(),
+        })
+    end,
+})
 
 -- syntax highlighting and lsp for .zshrc
 -- Assuming you have installed nvim-lspconfig
