@@ -1,0 +1,126 @@
+@import "mocha.css";
+
+* {
+  font-family: VictorMono NF;
+  font-weight: 700;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.empty #window {
+  background: none;
+  color: transparent;
+  border: 0px;
+}
+
+#custom-os {
+  color: @red;
+  background-color: @mantle;
+  border: 2px solid @mantle;
+  border-radius: 20px;
+  padding: 0px 12px;
+}
+
+#window {
+  color: @peach;
+  background-color: @mantle;
+  border: 2px solid @mantle;
+  border-radius: 20px;
+  padding: 0px 12px;
+}
+
+#window.2 {
+  color: @red;
+  background-color: @mantle;
+  border: 2px solid @mantle;
+  border-radius: 20px;
+  padding: 0px 12px;
+}
+
+#workspaces {
+  background-color: @mantle;
+  border: 2px solid @mantle;
+  border-radius: 20px;
+  padding: 0px 8px;
+}
+
+#workspaces button {
+  background-color: @transparent;
+  color: @text;
+}
+
+#workspaces button:hover {
+  background-color: @surface0;
+  border-radius: 4px;
+}
+
+#workspaces button.empty {
+  color: @surface2;
+}
+
+#workspaces button.visible {
+  color: @lavender;
+}
+
+#workspaces button.active {
+  color: @teal;
+}
+
+#workspaces button.urgent {
+  color: @mantle;
+  background-color: @red;
+}
+
+.modules-right {
+  background-color: @mantle;
+  border: 2px solid @mantle;
+  border-radius: 20px;
+  padding: 0px 12px;
+}
+
+#battery {
+  color: @subtext0;
+  padding: 0px 4px;
+}
+
+#battery.warning {
+  color: @peach;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#backlight {
+  color: @yellow;
+  padding: 0px 4px;
+}
+
+#network {
+  color: @sky;
+  padding: 0px 4px;
+}
+
+#network.disconnected {
+  color: @overlay0;
+}
+
+#pulseaudio {
+  color: @mauve;
+  padding: 0px 4px;
+}
+
+#pulseaudio.muted {
+  color: @overlay0;
+}
+
+#clock {
+  color: @blue;
+  padding: 0px 4px;
+}
