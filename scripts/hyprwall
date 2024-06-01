@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Check if the user provided an argument
+if [ -z "$1" ]; then
+	echo "Usage: $0 <file path or file name>"
+	exit 1
+fi
+
+# Get the absolute path
+full_path=$(realpath "$1")
+
+HYPRPAPER_CFG="/home/rudy/.config/hypr/hyprpaper.conf"
+
+echo "splash = false" >$HYPRPAPER_CFG
+echo "ipc = off" >>$HYPRPAPER_CFG
+
+echo "preload = $full_path" >>$HYPRPAPER_CFG
+echo "wallpaper = ,$full_path" >>$HYPRPAPER_CFG
+
+hyprctl hyprpaper unload all
+hyprctl hyprpaper preload "$full_path"
+hyprctl hyprpaper wallpaper ",$full_path"

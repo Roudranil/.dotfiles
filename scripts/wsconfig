@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# this script is to be run only when the second monitor is connected
+# another way would be to enable a service or use x-no-resize script
+# from github
+
+# this one is to set the laptop monitor to fractional scaling in order
+# to prevent the mouse flickering issue
+# may result in some lags
+xrandr --output eDP-1 --scale 0.9999
+# this one creates a fake 1920x1080 resolution for the 1366x768 monitor
+xrandr --output HDMI-1 --scale 1.4
+# restart the polybar instances
+# polybar-msg cmd restart &>/dev/null
+~/.config/polybar/launch.sh

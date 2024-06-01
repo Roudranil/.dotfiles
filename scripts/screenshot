@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Define the arrays of commands and targets
+commands=("copy" "save" "copysave" "edit")
+targets=("active" "screen" "output" "area")
+
+# Convert arrays to newline-separated strings for rofi
+commands_str=$(printf "%s\n" "${commands[@]}")
+targets_str=$(printf "%s\n" "${targets[@]}")
+
+# Open the first rofi menu to select a command
+selected_command=$(echo -e "$commands_str" | rofi -dmenu -p "Select screenshot command")
+
+# Check if a command was selected
+if [ -n "$selected_command" ]; then
+	# Open the second rofi menu to select a target
+	selected_target=$(echo -e "$targets_str" | rofi -dmenu -p "Select screenshot target")
+
+	# Check if a target was selected
+	if [ -n "$selected_target" ]; then
+		# Execute the grimblast command with the selected options
+		grimblast --notify --freeze "$selected_command" "$selected_target"
+	else
+		echo "No target selected."
+	fi
+else
+	echo "No command selected."
+fi
