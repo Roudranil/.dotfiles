@@ -22,7 +22,7 @@ execute() {
 
 case "$chosen" in
 "$shutdown")
-	execute "shutdown" "shutdown"
+	execute "shutdown now" "shutdown"
 	;;
 "$reboot")
 	execute "reboot" "reboot"
