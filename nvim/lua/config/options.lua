@@ -4,14 +4,11 @@
 
 local opt = vim.opt
 
--- Overwritten options
+opt.tabstop = 4 -- 4 spaces = 1 tab
+opt.shiftwidth = 4 -- tab = 4 spaces
 
-opt.shiftwidth = 4 -- 4 spaces indent
-opt.tabstop = 4 -- 1 tab = 4 spaces
-opt.scrolloff = 50 -- 50 lines of context
-opt.fillchars = { eob = "~" }
-opt.textwidth = 80
-opt.wrap = true
+-- FILETYPES
 
--- global vim config
-vim.g.lazyvim_python_lsp = "pyright"
+vim.filetype.add({
+  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+})

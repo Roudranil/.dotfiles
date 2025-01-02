@@ -1,0 +1,28 @@
+pikachu
+raichu
+charizard
+charizard --mega-x
+charizard --shiny
+blastoise
+blastoise --mega
+venusaur
+venusaur --mega
+blaziken
+blaziken
+greninja
+greninja --shiny
+mew
+mewtwo
+mewtwo --mega-x
+mewtwo --mega-y
+articuno
+moltres
+zapdos
+suicune
+entei
+raikou
+dialga
+palkia
+giratina
+arceus
+dragonite

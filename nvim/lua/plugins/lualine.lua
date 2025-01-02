@@ -1,8 +1,8 @@
 local M = { "nvim-lualine/lualine.nvim" }
-local Util = require("lazyvim.util")
+-- local Util = require("lazyvim.util")
 local icons = require("lazyvim.config").icons
 local colors = require("colorscheme.theme.catppuccin").base_30
-local theme = require("colorscheme.theme.catppuccin").mocha
+-- local theme = require("colorscheme.theme.catppuccin").mocha
 
 M.opts = {
     disabled_filetypes = {
@@ -22,8 +22,8 @@ M.opts = {
             {
                 function()
                     local msg = "No Active Lsp"
-                    local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-                    local clients = vim.lsp.get_active_clients()
+                    local buf_ft = vim.api.nvim_get_option_value(0, "filetype")
+                    local clients = vim.lsp.get_clients()
                     if next(clients) == nil then
                         return msg
                     end
